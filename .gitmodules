@@ -1,0 +1,9 @@
+[submodule "valyzer"]
+	path = valyzer
+	url = git@gitlab.lrz.de:aemy/administration/projects/scale4edge/valyzer.git
+[submodule "embench-iot"]
+	path = embench-iot
+	url = git@gitlab.lrz.de:aemy/administration/projects/scale4edge/embench-iot.git
+[submodule "seal"]
+	path = seal
+	url = git@gitlab.lrz.de:aemy/administration/projects/scale4edge/seal.git
