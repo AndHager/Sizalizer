@@ -1,0 +1,14 @@
+# Spec file for semihosting syscalls.
+
+%rename lib	old_lib
+%rename link	old_link
+%rename startfile	old_startfile
+
+*lib:
+--start-group -lc -lsemihost -letiss_crt0 --end-group
+
+*link:
+%(old_link) %:replace-outfile(-lgloss -lsemihost)
+
+*startfile:
+crtbegin%O%s

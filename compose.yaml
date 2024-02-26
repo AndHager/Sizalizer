@@ -1,0 +1,25 @@
+services:
+  integrator:
+    build: .    
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      - memgraph-network
+    depends_on:
+      - memgraph
+    links:
+      - memgraph
+
+
+  memgraph:
+    image: memgraph
+    ports:
+      - "7687:7687" # Expose the database bolt port
+      - "7444:7444" # Expose the secure connection port
+      - "3000:3000" # Expose the web interface port
+    networks:
+      - memgraph-network
+
+networks:
+  memgraph-network:
+    driver: bridge
