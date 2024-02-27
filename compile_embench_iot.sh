@@ -19,7 +19,7 @@ python3 ./build_all.py \
             --arch=riscv32 \
             --chip=generic \
             --board=ri5cyverilator \
-            --cc=/opt/riscv-elf/bin/clang \
+            --cc=/opt/riscv/bin/riscv32-unknown-elf-clang \
             --cflags="-march=${RISCV_ARCH} -mabi=${RISCV_ABI} -fno-builtin-bcmp -Oz" \
             --ldflags="-march=${RISCV_ARCH} -mabi=${RISCV_ABI} -nostartfiles -nostdlib" \
             --dummy-libs="crt0 libc libgcc libm"
