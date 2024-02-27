@@ -7,3 +7,6 @@
 [submodule "seal"]
 	path = seal
 	url = git@gitlab.lrz.de:aemy/administration/projects/scale4edge/seal.git
+[submodule "etiss"]
+	path = etiss
+	url = git@github.com:tum-ei-eda/etiss.git
