@@ -15,14 +15,16 @@ configure_file(etiss.ld.in etiss.ld @ONLY)
 configure_file(memsegs.ini.in memsegs.ini @ONLY)
 
 set(ETISS_LDSCRIPT ${CMAKE_CURRENT_BINARY_DIR}/etiss.ld)
-set(ETISS_LDFLAGS "-L${CMAKE_CURRENT_BINARY_DIR}/riscv_crt0 --specs=${CMAKE_CURRENT_SOURCE_DIR}/etiss-semihost.specs -T ${ETISS_LDSCRIPT}")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${ETISS_LDFLAGS}")
+set(ETISS_LDFLAGS "SHELL:-T${ETISS_LDSCRIPT} -lgloss -lsemihost")
 message(CMAKE_EXE_LINKER_FLAGS=${CMAKE_EXE_LINKER_FLAGS})
 set(ETISS_ELFINI ${CMAKE_CURRENT_SOURCE_DIR}/elffile.ini.in)
+add_link_options("${ETISS_LDFLAGS}")
+# NOTE: spec files do NOT work with clang (only gcc)
+add_compile_options("--specs=./etiss-semihost.specs")
 
 
-#clang -fno-builtin-bcmp -Oz -fpass-plugin=/home/ahc/Desktop/CodeComp/integrator/seal/llvm-pass-plugin/build/libLLVMCDFG.so -I/home/ahc/Desktop/CodeComp/integrator/embench-iot/support -I/home/ahc/Desktop/CodeComp/integrator/embench-iot/config/riscv32/boards/ri5cyverilator -I/home/ahc/Desktop/CodeComp/integrator/embench-iot/config/riscv32/chips/generic -I/home/ahc/Desktop/CodeComp/integrator/embench-iot/config/riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1 -o beebsc.o -c /home/ahc/Desktop/CodeComp/integrator/embench-iot/support/beebsc.c
-
+add_library(support support/beebsc.c support/main.c config/riscv32/chips/generic/chipsupport.c config/riscv32/boards/ri5cyverilator/boardsupport.c)
+target_include_directories(support PUBLIC support)
+target_compile_options(support PUBLIC -DWARMUP_HEAT=0)
 add_subdirectory(riscv_crt0)
 add_subdirectory(src)
-

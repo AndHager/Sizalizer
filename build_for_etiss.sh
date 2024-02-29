@@ -12,9 +12,17 @@ BD_SUPPORT_PATH="${EMBENCH_PATH}/bd/support"
 CC="/opt/riscv/bin/riscv32-unknown-elf-clang"
 CFLAGS="-D__riscv__ -march=rv32gc -mabi=ilp32d -fno-builtin-bcmp -Oz -I${SUPPORT_PATH} -I${EMBENCH_PATH}/config/riscv32/boards/ri5cyverilator -I${EMBENCH_PATH}/config/riscv32/chips/generic -I${EMBENCH_PATH}/config/riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1"
 
+if [[ "${1:-NONE}" == "clean" ]]; then
+    rm -rf ${BUILD_PATH}
+    rm -rf "${EMBENCH_PATH}/bd/install"
+    exit
+fi
+
 # create build dir
 cp -r ${INTEGRATOR_PATH}/res/* ${INTEGRATOR_PATH}/embench-iot/bd
 cp -r ${EMBENCH_PATH}/src/* ${EMBENCH_PATH}/bd/src
+cp -r ${EMBENCH_PATH}/support/* ${EMBENCH_PATH}/bd/support
+cp -r ${EMBENCH_PATH}/config/* ${EMBENCH_PATH}/bd/config
 mkdir -p ${BUILD_PATH}
 
 # Build support Files for etiss
@@ -30,7 +38,7 @@ ${CC} ${CFLAGS} -o ${EMBENCH_PATH}/bd/config/riscv32/boards/ri5cyverilator/board
 
 # Build embench-iot for etiss
 cd ${BUILD_PATH}
-cmake -DCMAKE_TOOLCHAIN_FILE=rv32gc-toolchain.cmake -DRISCV_TOOLCHAIN_PREFIX=/opt/riscv -DCMAKE_INSTALL_PREFIX=../install ..
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=rv32gc-toolchain.cmake -DRISCV_TOOLCHAIN_PREFIX=/opt/riscv -DCMAKE_INSTALL_PREFIX=../install ..
 make VERBOSE=1
 make install
 

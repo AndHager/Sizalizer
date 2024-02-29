@@ -6,6 +6,7 @@ macro(add_executable_etiss TARGET)
 	set(BIN_NAME ${TARGET})
 
 	configure_file(${ETISS_ELFINI} ${TARGET}.ini @ONLY)
+	target_link_libraries(${TARGET} etiss_crt0 support)
 
 	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${TARGET}.ini DESTINATION ini)
 	install(TARGETS ${TARGET} DESTINATION bin)
