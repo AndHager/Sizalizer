@@ -1,0 +1,1 @@
+add_executable_etiss(crc32 crc_32.c)

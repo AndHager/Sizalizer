@@ -6,11 +6,13 @@ macro(add_executable_etiss TARGET)
 	set(BIN_NAME ${TARGET})
 
 	configure_file(${ETISS_ELFINI} ${TARGET}.ini @ONLY)
+	target_link_libraries(${TARGET} etiss_crt0 support)
 
 	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${TARGET}.ini DESTINATION ini)
 	install(TARGETS ${TARGET} DESTINATION bin)
 endmacro()
-
+include_directories(../../support ../../riscv32/boards/ri5cyverilator ../../riscv32/chips/generic)
+add_compile_options(-DCPU_MHZ=1)
 add_subdirectory(aha-mont64)
 # add_subdirectory(edn)                
 # add_subdirectory(huffbench) 

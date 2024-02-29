@@ -56,11 +56,6 @@ _start:
   sub     a2, a2, a0
   call    memset
 
-  # Register global termination functions
-  # to be called upon exit
-  la      a0, __libc_fini_array
-  call    atexit
-
   # Run global initialization functions
   call    __libc_init_array
 
