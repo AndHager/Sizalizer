@@ -22,9 +22,10 @@ add_link_options("${ETISS_LDFLAGS}")
 # NOTE: spec files do NOT work with clang (only gcc)
 add_compile_options("--specs=./etiss-semihost.specs")
 
-
-add_library(support support/beebsc.c support/main.c config/riscv32/chips/generic/chipsupport.c config/riscv32/boards/ri5cyverilator/boardsupport.c)
+# support/dummy-crt0.c support/dummy-libc.c support/dummy-libgcc.c support/dummy-libm.c
+add_library(support support/beebsc.c support/main.c support/dummy-crt0.c support/dummy-libc.c support/dummy-libgcc.c support/dummy-libm.c config/riscv32/chips/generic/chipsupport.c config/riscv32/boards/ri5cyverilator/boardsupport.c)
 target_include_directories(support PUBLIC support)
 target_compile_options(support PUBLIC -DWARMUP_HEAT=0)
+target_link_libraries(support)
 add_subdirectory(riscv_crt0)
 add_subdirectory(src)

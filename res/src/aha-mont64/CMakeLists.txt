@@ -1,1 +1,3 @@
-add_executable_etiss(aha-mont64 mont64.c)
+file(GLOB SOURCES *.c)
+file(GLOB HEADERS *.h)
+add_executable_etiss(aha-mont64 ${SOURCES} ${HEADERS})

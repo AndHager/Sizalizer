@@ -1,0 +1,26 @@
+  "size results" :
+  { "detailed size results" :
+    { "aha-mont64" : 1.85,
+      "crc32" : 3.70,
+      "cubic" : 2.11,
+      "edn" : 1.73,
+      "huffbench" : 1.87,
+      "matmult-int" : 2.75,
+      "minver" : 1.58,
+      "nbody" : 1.49,
+      "nettle-aes" : 1.68,
+      "nettle-sha256" : 1.71,
+      "nsichneu" : 1.15,
+      "picojpeg" : 1.26,
+      "qrduino" : 1.19,
+      "sglib-combined" : 2.71,
+      "slre" : 1.61,
+      "st" : 1.53,
+      "statemate" : 1.05,
+      "ud" : 2.30,
+      "wikisort" : 1.18
+    },
+    "size geometric mean" : 1.72,
+    "size geometric standard deviation" : 1.38
+  },
+All benchmarks sized successfully
