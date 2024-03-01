@@ -27,6 +27,7 @@ etiss.loglevel=4
 
 [BoolConfigurations]
 arch.enable_semihosting=true
+etiss.exit_on_loop=true
 
 [IntConfigurations]
 simple_mem_system.memseg_origin_00=@MEM_ROM_ORIGIN@
