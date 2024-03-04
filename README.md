@@ -14,6 +14,7 @@ It is tested on Ubuntu 22.04
 - gcc 
 - g++ 
 - docker
+- binwalk
 - python3
 - pip3
 

@@ -128,6 +128,13 @@ if [ "$debug" = true ] ; then
     echo "  analyze_traces=$analyze_traces"
 fi
 
+
+if [ "$clean" = true ] ; then
+    echo "INFO: Cleaning old out"
+    rm -r ${SCRIPT_ROOT}/out
+    mkdir out
+fi
+
 if [ "$purge_db" = true ] ; then
     echo "INFO: Start memgraph"
     docker start memgraph &> ${OUT_DIR}/docker_start_out.txt
@@ -163,11 +170,7 @@ fi
 
 if [ "$analyze_binary" = true ] ; then
     echo "INFO: Static anaylzing the binaries of Embench-iot"
-    ${SCRIPT_ROOT}/disassemble_embench_bins.sh
-    cd ${OUT_DIR} 
-    ASM=$(printf  '%s ' *.rv32)
-    cd ${SCRIPT_ROOT}
-    python3 ${SCRIPT_ROOT}/valyzer/analyze.py --path ${OUT_DIR} ${ASM}
+    ${SCRIPT_ROOT}/static_analyze.sh
 fi
 
 if [ "$run_embench_size" = true ] ; then
