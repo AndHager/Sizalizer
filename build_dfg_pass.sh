@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Author: Andreas Hager-Clukas
+# Email: andreas.hager-clukas@hm.edu
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -10,9 +11,5 @@ mkdir -p build
 cd build
 cmake ..
 make -j4
-
-# Build Embench
-${SCRIPT_ROOT}/compile_embench_iot.sh 
-
 
 cd "${SCRIPT_ROOT}"

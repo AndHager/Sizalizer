@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Author: Andreas Hager-Clukas
+# Email: andreas.hager-clukas@hm.edu
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
