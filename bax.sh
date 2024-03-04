@@ -170,6 +170,7 @@ fi
 
 if [ "$analyze_binary" = true ] ; then
     echo "INFO: Static anaylzing the binaries of Embench-iot"
+    ${SCRIPT_ROOT}/disassemble_embench_bins.sh
     ${SCRIPT_ROOT}/static_analyze.sh
 fi
 

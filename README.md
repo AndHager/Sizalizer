@@ -15,6 +15,7 @@ It is tested on Ubuntu 22.04
 - g++ 
 - docker
 - binwalk
+- time (explicitly installed not the bash func)
 - python3
 - pip3
 
