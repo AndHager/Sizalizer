@@ -12,7 +12,7 @@ clean=false
 start_db=false
 purge_db=false
 build_dfg=false
-analyze_dfg=false
+analyze_dfg=true
 build_embench=false
 analyze_binary=true
 run_embench_size=false
@@ -169,8 +169,10 @@ if [ "$build_embench" = true ] ; then
 fi
 
 if [ "$analyze_binary" = true ] ; then
-    echo "INFO: Static anaylzing the binaries of Embench-iot"
+    echo "INFO: Disassembling Binaries"
     ${SCRIPT_ROOT}/disassemble_embench_bins.sh
+
+    echo "INFO: Static anaylzing the binaries of Embench-iot"
     ${SCRIPT_ROOT}/static_analyze.sh
 fi
 
@@ -189,7 +191,7 @@ if [ "$analyze_traces" = true ] ; then
     cd ${OUT_DIR} 
     TRACES=$(printf  '%s ' *_trace.txt)
     cd ${SCRIPT_ROOT}
-    echo "  INFO Executing: python3 ${SCRIPT_ROOT}/seal/analysis/dynamic/main.py --path ${OUT_DIR} ${TRACES}"
+    # echo "  INFO Executing: python3 ${SCRIPT_ROOT}/seal/analysis/dynamic/main.py --path ${OUT_DIR} ${TRACES}"
     python3 ${SCRIPT_ROOT}/seal/analysis/dynamic/main.py --path ${OUT_DIR} ${TRACES}
 fi
 

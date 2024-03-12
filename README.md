@@ -62,5 +62,3 @@ Available options:
     --analyze-traces      Enable trace analysis (default: true)
     --help                Display this help and exit
 ```
-
-

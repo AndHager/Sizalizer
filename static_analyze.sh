@@ -15,7 +15,7 @@ do
     
     cd "${SCRIPT_ROOT}/out"
     ${TOOL_PATH}/llvm-objcopy -O binary --only-section=.text ${fqfp} ${OUT_DIR}/${file}_text.dmp 
-    binwalk -q -E -J ${OUT_DIR}/${file}_text.dmp
+    binwalk --high=0.9 --low=0.8 -c -E -J ${OUT_DIR}/${file}_text.dmp &> ${OUT_DIR}/${file}_ent.txt
     cd "${SCRIPT_ROOT}"
 
     # echo "${TOOL_PATH}/riscv32-unknown-elf-readelf -S $fqfp"
