@@ -12,12 +12,12 @@ clean=false
 start_db=false
 purge_db=false
 build_dfg=false
-analyze_dfg=true
+analyze_dfg=false
 build_embench=false
-analyze_binary=true
+analyze_binary=false
 run_embench_size=false
 run_etiss_embench=false
-analyze_traces=true
+analyze_traces=false
 
 debug=false
 
@@ -88,7 +88,7 @@ do
     shift # Remove --run-etiss-embench from processing
     ;;
     --analyze-traces)
-    analyze_traces=false
+    analyze_traces=true
     shift # Remove --analyze-traces from processing
     ;;
     --help)
