@@ -16,7 +16,7 @@ start_db=false
 purge_db=false
 build_dfg=false
 analyze_dfg=false
-build_embench=false
+build_target=false
 analyze_binary=false
 run_embench_size=false
 run_etiss_embench=false
@@ -33,14 +33,14 @@ This script builds and executes the Analysis for Embench-iot.
 
 Available options:
 
-    --clean               Clean out dir (default: $clean)
+    --clean               Clean run full analysis (default: $clean)
     --musl                Set target to musl (default: $musl)
     --embench             set target to Embench (dfault: $embench)
     --start-db            Start the database service (default: $start_db)
     --purge-db            Purge the database (default: $purge_db)
     --build-dfg           Build the data flow graph (default: $build_dfg)
     --analyze-dfg         Analyze the data flow graph (default: $analyze_dfg)
-    --build-embench       Build Embench benchmark (default: $build_embench)
+    --build-embench       Build Embench benchmark (default: $build_target)
     --analyze-binary      Analyze binary files (default: $analyze_binary)
     --run-embench-size    Run Embench benchmark for size (default: $run_embench_size)
     --run-etiss-embench   Run ETISS with Embench benchmark (default: $run_etiss_embench)
@@ -64,6 +64,14 @@ do
     start_db=true
     shift # Remove --start-db from processing
     ;;
+    --embench)
+    embench=true
+    shift # Remove --embench from processing
+    ;;
+    --musl)
+    musl=true
+    shift # Remove --musl from processing
+    ;;
     --purge-db)
     purge_db=true
     shift # Remove --purge-db from processing
@@ -77,7 +85,7 @@ do
     shift # Remove --analyze-dfg from processing
     ;;
     --build-embench)
-    build_embench=true
+    build_target=true
     shift # Remove --build-embench from processing
     ;;
     --analyze-binary)
@@ -112,10 +120,12 @@ if [ "$clean" = true ] ; then
     purge_db=true
     build_dfg=true
     analyze_dfg=true
-    build_embench=true
+    build_target=true
     analyze_binary=true
+
     run_embench_size=true
     run_etiss_embench=true
+
     analyze_traces=true
 fi
 
@@ -126,10 +136,14 @@ if [ "$debug" = true ] ; then
     echo "  purge_db=$purge_db"
     echo "  build_dfg=$build_dfg"
     echo "  analyze_dfg=$analyze_dfg"
-    echo "  build_embench=$build_embench"
+    echo "  build_target=$build_target"
     echo "  analyze_binary=$analyze_binary"
-    echo "  run_embench_size=$run_embench_size"
-    echo "  run_etiss_embench=$run_etiss_embench"
+
+    if [ "$embench" = true ] ; then
+        echo "  run_embench_size=$run_embench_size"
+        echo "  run_etiss_embench=$run_etiss_embench"
+    fi 
+
     echo "  analyze_traces=$analyze_traces"
 fi
 
@@ -156,29 +170,56 @@ if [ "$build_dfg" = true ] ; then
     ${SCRIPT_ROOT}/build_dfg_pass.sh &> ${OUT_DIR}/dfg_pass_build.txt
 
     # Static analyze benchmark
-    echo "INFO: Building DFG of Embench-iot"
-    ${SCRIPT_ROOT}/static_dfg_analyze_embench_iot.sh &> ${OUT_DIR}/dfg_pass_run.txt
+    echo "INFO: Building DFG"
+    if [ "$embench" = true ] ; then
+        ${SCRIPT_ROOT}/static_dfg_analyze_embench_iot.sh &> ${OUT_DIR}/embench_dfg_pass_run.txt
+    fi 
+
+    if [ "$musl" = true ] ; then
+        ${SCRIPT_ROOT}/static_dfg_analyze_musl.sh &> ${OUT_DIR}/musl_dfg_pass_run.txt
+    fi 
 fi
 
 if [ "$analyze_dfg" = true ] ; then
-    echo "INFO: Analyzing DFG of Embench-iot"
+    echo "INFO: Analyzing DFG"
     python3 ${SCRIPT_ROOT}/seal/analysis/static/main.py --pdc True &> ${OUT_DIR}/dfg_analysis.txt
 fi
 
-if [ "$build_embench" = true ] ; then
-    echo "INFO: Building embench"
-    ${SCRIPT_ROOT}/compile_embench_iot.sh &> ${OUT_DIR}/embench_build.txt
-    
-    echo "INFO: Building embench for ETISS"
-    ${SCRIPT_ROOT}/build_for_etiss.sh  &> ${OUT_DIR}/embench_for_etiss_build.txt
+if [ "$build_target" = true ] ; then
+    if [ "$embench" = true ] ; then
+        echo "INFO: Building embench"
+        ${SCRIPT_ROOT}/compile_embench_iot.sh &> ${OUT_DIR}/embench_build.txt
+
+        echo "INFO: Building embench for ETISS"
+        ${SCRIPT_ROOT}/build_for_etiss.sh  &> ${OUT_DIR}/embench_for_etiss_build.txt
+    fi 
+
+    if [ "$musl" = true ] ; then
+        echo "INFO: Building musl"
+        ${SCRIPT_ROOT}/compile_musl.sh &> ${OUT_DIR}/musl_build.txt
+
+
+        echo "INFO: Building bench for musl"
+        echo "TODO: select bench" # maybe https://www.stupid-projects.com/posts/compile-benchmarks-with-gcc-musl-and-clang/ https://bitbucket.org/dimtass/gcc_musl_clang_benchmark/src/master/
+    fi 
 fi
 
 if [ "$analyze_binary" = true ] ; then
-    echo "INFO: Disassembling Binaries"
-    ${SCRIPT_ROOT}/disassemble_embench_bins.sh
+    if [ "$embench" = true ] ; then
+        echo "INFO: Disassembling Binaries"
+        ${SCRIPT_ROOT}/disassemble_embench_bins.sh
 
-    echo "INFO: Static anaylzing the binaries of Embench-iot"
-    ${SCRIPT_ROOT}/static_analyze.sh
+        echo "INFO: Static anaylzing the binaries of Embench-iot"
+        ${SCRIPT_ROOT}/static_analyze_embench.sh
+    fi 
+
+    if [ "$musl" = true ] ; then
+        echo "INFO: Disassembling Binaries"
+        ${SCRIPT_ROOT}/disassemble_musl_bins.sh
+
+        echo "INFO: Static anaylzing the binaries of musl"
+        ${SCRIPT_ROOT}/static_analyze_musl.sh
+    fi 
 fi
 
 if [ "$run_embench_size" = true ] ; then
@@ -192,7 +233,7 @@ if [ "$run_etiss_embench" = true ] ; then
 fi
 
 if [ "$analyze_traces" = true ] ; then
-    echo "INFO: Analyzing the Embench-iot traces"
+    echo "INFO: Analyzing traces"
     cd ${OUT_DIR} 
     TRACES=$(printf  '%s ' *_trace.txt)
     cd ${SCRIPT_ROOT}

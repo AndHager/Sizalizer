@@ -26,3 +26,4 @@ cd "${OUT_DIR}"
 ASM=$(printf  '%s ' *.rv32)
 cd "${SCRIPT_ROOT}"
 python3 ${SCRIPT_ROOT}/valyzer/analyze.py --path ${OUT_DIR} ${ASM}
+
