@@ -9,6 +9,9 @@ OUT_DIR=${SCRIPT_ROOT}/out
 # Set default values
 clean=false
 
+musl=false
+embench=false
+
 start_db=false
 purge_db=false
 build_dfg=false
@@ -30,7 +33,9 @@ This script builds and executes the Analysis for Embench-iot.
 
 Available options:
 
-    --clean               Enable cleaning operation (default: $clean)
+    --clean               Clean out dir (default: $clean)
+    --musl                Set target to musl (default: $musl)
+    --embench             set target to Embench (dfault: $embench)
     --start-db            Start the database service (default: $start_db)
     --purge-db            Purge the database (default: $purge_db)
     --build-dfg           Build the data flow graph (default: $build_dfg)
