@@ -1,0 +1,2658 @@
+a64l.o.asm contains: 51 insts, with 134 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 24 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/abort_lock.o.asm
+abort.o.asm contains: 44 insts, with 106 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 17 %
+abs.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+accept4.o.asm contains: 84 insts, with 190 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 12 %
+accept.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+access.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+acct.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+acosf.o.asm contains: 270 insts, with 656 bytes
+  Improvement by replacing 32 with 16 Bit inst: 116 Byte == 18 %
+acoshf.o.asm contains: 99 insts, with 210 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 6 %
+acoshl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+acosh.o.asm contains: 139 insts, with 294 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 5 %
+acosl.o.asm contains: 760 insts, with 2508 bytes
+  Improvement by replacing 32 with 16 Bit inst: 988 Byte == 39 %
+acos.o.asm contains: 623 insts, with 1576 bytes
+  Improvement by replacing 32 with 16 Bit inst: 330 Byte == 21 %
+adjtime.o.asm contains: 85 insts, with 220 bytes
+  Improvement by replacing 32 with 16 Bit inst: 50 Byte == 23 %
+adjtimex.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+affinity.o.asm contains: 44 insts, with 104 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 15 %
+aio.o.asm contains: 999 insts, with 2576 bytes
+  Improvement by replacing 32 with 16 Bit inst: 578 Byte == 22 %
+aio_suspend.o.asm contains: 170 insts, with 426 bytes
+  Improvement by replacing 32 with 16 Bit inst: 86 Byte == 20 %
+alarm.o.asm contains: 31 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 9 %
+aligned_alloc.o.asm contains: 191 insts, with 566 bytes
+  Improvement by replacing 32 with 16 Bit inst: 184 Byte == 33 %
+alphasort.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/arch_prctl.o.asm
+asctime.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+asctime_r.o.asm contains: 52 insts, with 126 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 17 %
+asinf.o.asm contains: 210 insts, with 502 bytes
+  Improvement by replacing 32 with 16 Bit inst: 82 Byte == 16 %
+asinhf.o.asm contains: 108 insts, with 238 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 9 %
+asinhl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+asinh.o.asm contains: 150 insts, with 330 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 9 %
+asinl.o.asm contains: 813 insts, with 2700 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1074 Byte == 40 %
+asin.o.asm contains: 514 insts, with 1278 bytes
+  Improvement by replacing 32 with 16 Bit inst: 250 Byte == 20 %
+asprintf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+assert.o.asm contains: 14 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 22 %
+atan2f.o.asm contains: 168 insts, with 436 bytes
+  Improvement by replacing 32 with 16 Bit inst: 100 Byte == 23 %
+atan2l.o.asm contains: 721 insts, with 2340 bytes
+  Improvement by replacing 32 with 16 Bit inst: 898 Byte == 38 %
+atan2.o.asm contains: 238 insts, with 636 bytes
+  Improvement by replacing 32 with 16 Bit inst: 160 Byte == 25 %
+atanf.o.asm contains: 208 insts, with 520 bytes
+  Improvement by replacing 32 with 16 Bit inst: 104 Byte == 20 %
+atanhf.o.asm contains: 85 insts, with 190 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 11 %
+atanhl.o.asm contains: 322 insts, with 954 bytes
+  Improvement by replacing 32 with 16 Bit inst: 310 Byte == 32 %
+atanh.o.asm contains: 108 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 8 %
+atanl.o.asm contains: 1681 insts, with 6024 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2662 Byte == 44 %
+atan.o.asm contains: 370 insts, with 928 bytes
+  Improvement by replacing 32 with 16 Bit inst: 188 Byte == 20 %
+atexit.o.asm contains: 113 insts, with 308 bytes
+  Improvement by replacing 32 with 16 Bit inst: 82 Byte == 27 %
+atof.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+atoi.o.asm contains: 38 insts, with 110 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 31 %
+atoll.o.asm contains: 47 insts, with 142 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 34 %
+atol.o.asm contains: 38 insts, with 110 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 31 %
+at_quick_exit.o.asm contains: 71 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 24 %
+basename.o.asm contains: 33 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 27 %
+bcmp.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+bcopy.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+bind.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+bind_textdomain_codeset.o.asm contains: 18 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 10 %
+block.o.asm contains: 23 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 23 %
+brk.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+bsearch.o.asm contains: 40 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 11 %
+btowc.o.asm contains: 18 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 25 %
+bzero.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+c16rtomb.o.asm contains: 42 insts, with 106 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 21 %
+c32rtomb.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cabsf.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cabsl.o.asm contains: 37 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+cabs.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cache.o.asm contains: 76 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 18 %
+cacosf.o.asm contains: 18 insts, with 42 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 14 %
+cacoshf.o.asm contains: 18 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 10 %
+cacoshl.o.asm contains: 75 insts, with 166 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 10 %
+cacosh.o.asm contains: 43 insts, with 92 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+cacosl.o.asm contains: 90 insts, with 218 bytes
+  Improvement by replacing 32 with 16 Bit inst: 38 Byte == 17 %
+cacos.o.asm contains: 47 insts, with 112 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 16 %
+calloc.o.asm contains: 76 insts, with 182 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 16 %
+call_once.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cap.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+cargf.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cargl.o.asm contains: 37 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+carg.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+casinf.o.asm contains: 82 insts, with 170 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 4 %
+casinhf.o.asm contains: 16 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 16 %
+casinhl.o.asm contains: 60 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 13 %
+casinh.o.asm contains: 40 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+casinl.o.asm contains: 268 insts, with 788 bytes
+  Improvement by replacing 32 with 16 Bit inst: 252 Byte == 32 %
+casin.o.asm contains: 108 insts, with 242 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 11 %
+catanf.o.asm contains: 154 insts, with 348 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 11 %
+catanhf.o.asm contains: 16 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 16 %
+catanhl.o.asm contains: 60 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 13 %
+catanh.o.asm contains: 40 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+catanl.o.asm contains: 588 insts, with 1926 bytes
+  Improvement by replacing 32 with 16 Bit inst: 750 Byte == 39 %
+catan.o.asm contains: 194 insts, with 450 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 14 %
+catclose.o.asm contains: 21 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 12 %
+catgets.o.asm contains: 160 insts, with 404 bytes
+  Improvement by replacing 32 with 16 Bit inst: 84 Byte == 21 %
+catopen.o.asm contains: 237 insts, with 698 bytes
+  Improvement by replacing 32 with 16 Bit inst: 224 Byte == 32 %
+cbrtf.o.asm contains: 154 insts, with 338 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 9 %
+cbrtl.o.asm contains: 551 insts, with 1556 bytes
+  Improvement by replacing 32 with 16 Bit inst: 454 Byte == 29 %
+cbrt.o.asm contains: 210 insts, with 500 bytes
+  Improvement by replacing 32 with 16 Bit inst: 80 Byte == 16 %
+ccosf.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+ccoshf.o.asm contains: 237 insts, with 532 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 11 %
+ccoshl.o.asm contains: 80 insts, with 174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 8 %
+ccosh.o.asm contains: 356 insts, with 804 bytes
+  Improvement by replacing 32 with 16 Bit inst: 92 Byte == 11 %
+ccosl.o.asm contains: 46 insts, with 102 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 10 %
+ccos.o.asm contains: 30 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 3 %
+ceilf.o.asm contains: 52 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 25 %
+ceill.o.asm contains: 248 insts, with 712 bytes
+  Improvement by replacing 32 with 16 Bit inst: 216 Byte == 30 %
+ceil.o.asm contains: 100 insts, with 226 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 12 %
+__cexpf.o.asm contains: 66 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 10 %
+cexpf.o.asm contains: 90 insts, with 204 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 12 %
+cexpl.o.asm contains: 80 insts, with 174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 8 %
+__cexp.o.asm contains: 94 insts, with 220 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 15 %
+cexp.o.asm contains: 133 insts, with 308 bytes
+  Improvement by replacing 32 with 16 Bit inst: 42 Byte == 14 %
+cfgetospeed.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cfmakeraw.o.asm contains: 19 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 24 %
+cfsetospeed.o.asm contains: 43 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 4 %
+chdir.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+chmod.o.asm contains: 7 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 22 %
+chown.o.asm contains: 9 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 18 %
+chroot.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+cimagf.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cimagl.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cimag.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+clearenv.o.asm contains: 22 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 12 %
+clearerr.o.asm contains: 26 insts, with 58 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 10 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/c_locale.o.asm
+clock_adjtime.o.asm contains: 145 insts, with 326 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 11 %
+clock_getcpuclockid.o.asm contains: 18 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 22 %
+clock_getres.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+clock_gettime.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+clock_nanosleep.o.asm contains: 28 insts, with 64 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+clock.o.asm contains: 49 insts, with 142 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 31 %
+clock_settime.o.asm contains: 18 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 10 %
+clogf.o.asm contains: 25 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+clogl.o.asm contains: 93 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 7 %
+clog.o.asm contains: 51 insts, with 104 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 2 %
+clone.o.asm contains: 16 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 11 %
+closedir.o.asm contains: 18 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+close.o.asm contains: 22 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 12 %
+cnd_broadcast.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cnd_destroy.o.asm contains: 1 insts, with 2 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cnd_init.o.asm contains: 19 insts, with 42 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 10 %
+cnd_signal.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cnd_timedwait.o.asm contains: 14 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 18 %
+cnd_wait.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+confstr.o.asm contains: 33 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 23 %
+conjf.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+conjl.o.asm contains: 19 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 32 %
+conj.o.asm contains: 11 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+connect.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+copy_file_range.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+copysignf.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+copysignl.o.asm contains: 19 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 17 %
+copysign.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+__cosdf.o.asm contains: 93 insts, with 218 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 15 %
+cosf.o.asm contains: 151 insts, with 400 bytes
+  Improvement by replacing 32 with 16 Bit inst: 98 Byte == 24 %
+coshf.o.asm contains: 91 insts, with 206 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 12 %
+coshl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cosh.o.asm contains: 138 insts, with 302 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 9 %
+__cosl.o.asm contains: 727 insts, with 2428 bytes
+  Improvement by replacing 32 with 16 Bit inst: 974 Byte == 40 %
+cosl.o.asm contains: 235 insts, with 660 bytes
+  Improvement by replacing 32 with 16 Bit inst: 190 Byte == 29 %
+__cos.o.asm contains: 185 insts, with 424 bytes
+  Improvement by replacing 32 with 16 Bit inst: 54 Byte == 13 %
+cos.o.asm contains: 99 insts, with 224 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 12 %
+cpowf.o.asm contains: 79 insts, with 158 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+cpowl.o.asm contains: 316 insts, with 916 bytes
+  Improvement by replacing 32 with 16 Bit inst: 284 Byte == 31 %
+cpow.o.asm contains: 161 insts, with 330 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 2 %
+cprojf.o.asm contains: 32 insts, with 74 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 14 %
+cprojl.o.asm contains: 99 insts, with 220 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 10 %
+cproj.o.asm contains: 51 insts, with 128 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 20 %
+crealf.o.asm contains: 1 insts, with 2 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+creall.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+creal.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+creat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+crypt_blowfish.o.asm contains: 647 insts, with 1850 bytes
+  Improvement by replacing 32 with 16 Bit inst: 556 Byte == 30 %
+crypt_des.o.asm contains: 682 insts, with 2026 bytes
+  Improvement by replacing 32 with 16 Bit inst: 662 Byte == 33 %
+crypt_md5.o.asm contains: 763 insts, with 2028 bytes
+  Improvement by replacing 32 with 16 Bit inst: 502 Byte == 25 %
+crypt.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+crypt_r.o.asm contains: 34 insts, with 110 bytes
+  Improvement by replacing 32 with 16 Bit inst: 42 Byte == 38 %
+crypt_sha256.o.asm contains: 824 insts, with 2274 bytes
+  Improvement by replacing 32 with 16 Bit inst: 626 Byte == 28 %
+crypt_sha512.o.asm contains: 1180 insts, with 3502 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1142 Byte == 33 %
+csinf.o.asm contains: 16 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 16 %
+csinhf.o.asm contains: 234 insts, with 526 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 11 %
+csinhl.o.asm contains: 80 insts, with 174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 8 %
+csinh.o.asm contains: 369 insts, with 828 bytes
+  Improvement by replacing 32 with 16 Bit inst: 90 Byte == 11 %
+csinl.o.asm contains: 60 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 13 %
+csin.o.asm contains: 40 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+csqrtf.o.asm contains: 197 insts, with 426 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 8 %
+csqrtl.o.asm contains: 80 insts, with 174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 8 %
+csqrt.o.asm contains: 355 insts, with 776 bytes
+  Improvement by replacing 32 with 16 Bit inst: 66 Byte == 9 %
+ctanf.o.asm contains: 16 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 16 %
+ctanhf.o.asm contains: 190 insts, with 412 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 8 %
+ctanhl.o.asm contains: 80 insts, with 174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 8 %
+ctanh.o.asm contains: 277 insts, with 616 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 10 %
+ctanl.o.asm contains: 60 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 13 %
+ctan.o.asm contains: 40 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+ctermid.o.asm contains: 8 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 33 %
+ctime.o.asm contains: 12 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ctime_r.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__ctype_b_loc.o.asm contains: 3 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 40 %
+__ctype_get_mb_cur_max.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+__ctype_tolower_loc.o.asm contains: 3 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 40 %
+__ctype_toupper_loc.o.asm contains: 3 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 40 %
+cuserid.o.asm contains: 37 insts, with 112 bytes
+  Improvement by replacing 32 with 16 Bit inst: 38 Byte == 34 %
+daemon.o.asm contains: 72 insts, with 170 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 15 %
+dcngettext.o.asm contains: 503 insts, with 1382 bytes
+  Improvement by replacing 32 with 16 Bit inst: 376 Byte == 27 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/default_attr.o.asm
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/defsysinfo.o.asm
+difftime.o.asm contains: 11 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+dirfd.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+dirname.o.asm contains: 46 insts, with 134 bytes
+  Improvement by replacing 32 with 16 Bit inst: 42 Byte == 31 %
+div.o.asm contains: 5 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 38 %
+dladdr.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+dlclose.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+dlerror.o.asm contains: 120 insts, with 312 bytes
+  Improvement by replacing 32 with 16 Bit inst: 72 Byte == 23 %
+dlinfo.o.asm contains: 31 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 11 %
+dl_iterate_phdr.o.asm contains: 102 insts, with 250 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 18 %
+dlopen.o.asm contains: 10 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 17 %
+__dlsym.o.asm contains: 10 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 17 %
+dlsym.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+dn_comp.o.asm contains: 310 insts, with 896 bytes
+  Improvement by replacing 32 with 16 Bit inst: 276 Byte == 31 %
+dn_expand.o.asm contains: 65 insts, with 204 bytes
+  Improvement by replacing 32 with 16 Bit inst: 74 Byte == 36 %
+dn_skipname.o.asm contains: 22 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 33 %
+dns_parse.o.asm contains: 104 insts, with 294 bytes
+  Improvement by replacing 32 with 16 Bit inst: 86 Byte == 29 %
+donate.o.asm contains: 94 insts, with 252 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 25 %
+dprintf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+drand48.o.asm contains: 39 insts, with 100 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 22 %
+dup2.o.asm contains: 17 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 15 %
+dup3.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+duplocale.o.asm contains: 25 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 11 %
+dup.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ecvt.o.asm contains: 66 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 54 Byte == 29 %
+emulate_wait4.o.asm contains: 87 insts, with 216 bytes
+  Improvement by replacing 32 with 16 Bit inst: 42 Byte == 19 %
+encrypt.o.asm contains: 105 insts, with 266 bytes
+  Improvement by replacing 32 with 16 Bit inst: 56 Byte == 21 %
+ent.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/__environ.o.asm
+epoll.o.asm contains: 47 insts, with 96 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 2 %
+erff.o.asm contains: 805 insts, with 1974 bytes
+  Improvement by replacing 32 with 16 Bit inst: 364 Byte == 18 %
+erfl.o.asm contains: 72 insts, with 144 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+erf.o.asm contains: 1170 insts, with 2952 bytes
+  Improvement by replacing 32 with 16 Bit inst: 612 Byte == 21 %
+__errno_location.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+err.o.asm contains: 142 insts, with 312 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 9 %
+ether.o.asm contains: 137 insts, with 336 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 18 %
+euidaccess.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+eventfd.o.asm contains: 29 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+execle.o.asm contains: 51 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 26 %
+execl.o.asm contains: 56 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 23 %
+execlp.o.asm contains: 56 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 23 %
+execve.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+execv.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+execvp.o.asm contains: 149 insts, with 380 bytes
+  Improvement by replacing 32 with 16 Bit inst: 82 Byte == 22 %
+_exit.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+exit.o.asm contains: 34 insts, with 84 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 19 %
+_Exit.o.asm contains: 7 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 22 %
+exp10f.o.asm contains: 70 insts, with 166 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 16 %
+exp10l.o.asm contains: 183 insts, with 500 bytes
+  Improvement by replacing 32 with 16 Bit inst: 134 Byte == 27 %
+exp10.o.asm contains: 79 insts, with 182 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 13 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/exp2f_data.o.asm
+exp2f.o.asm contains: 183 insts, with 410 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 11 %
+exp2l.o.asm contains: 882 insts, with 2976 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1212 Byte == 41 %
+exp2.o.asm contains: 395 insts, with 908 bytes
+  Improvement by replacing 32 with 16 Bit inst: 118 Byte == 13 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/exp_data.o.asm
+expf.o.asm contains: 191 insts, with 436 bytes
+  Improvement by replacing 32 with 16 Bit inst: 54 Byte == 12 %
+explicit_bzero.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+expl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+expm1f.o.asm contains: 304 insts, with 744 bytes
+  Improvement by replacing 32 with 16 Bit inst: 136 Byte == 18 %
+expm1l.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+expm1.o.asm contains: 469 insts, with 1130 bytes
+  Improvement by replacing 32 with 16 Bit inst: 192 Byte == 17 %
+__expo2f.o.asm contains: 28 insts, with 64 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+__expo2.o.asm contains: 41 insts, with 94 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 13 %
+exp.o.asm contains: 392 insts, with 892 bytes
+  Improvement by replacing 32 with 16 Bit inst: 108 Byte == 12 %
+ext2.o.asm contains: 24 insts, with 54 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 11 %
+ext.o.asm contains: 50 insts, with 134 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 25 %
+fabsf.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fabsl.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fabs.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+faccessat.o.asm contains: 138 insts, with 360 bytes
+  Improvement by replacing 32 with 16 Bit inst: 84 Byte == 23 %
+fallocate.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+fanotify.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+fchdir.o.asm contains: 28 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 18 %
+fchmodat.o.asm contains: 96 insts, with 238 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 19 %
+fchmod.o.asm contains: 36 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 16 %
+fchownat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+fchown.o.asm contains: 42 insts, with 98 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 14 %
+__fclose_ca.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fclose.o.asm contains: 64 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 7 %
+fcntl.o.asm contains: 111 insts, with 262 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 15 %
+fcvt.o.asm contains: 76 insts, with 244 bytes
+  Improvement by replacing 32 with 16 Bit inst: 92 Byte == 38 %
+fdatasync.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+fdimf.o.asm contains: 34 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 15 %
+fdiml.o.asm contains: 100 insts, with 222 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 10 %
+fdim.o.asm contains: 59 insts, with 142 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 17 %
+fdopendir.o.asm contains: 52 insts, with 112 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 7 %
+__fdopen.o.asm contains: 113 insts, with 286 bytes
+  Improvement by replacing 32 with 16 Bit inst: 60 Byte == 21 %
+fegetexceptflag.o.asm contains: 13 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+feholdexcept.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/fenv.o.asm
+fenv-sf.o.asm contains: 14 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+feof.o.asm contains: 24 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 8 %
+ferror.o.asm contains: 24 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 8 %
+fesetexceptflag.o.asm contains: 21 insts, with 44 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 5 %
+fesetround.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+feupdateenv.o.asm contains: 21 insts, with 42 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fexecve.o.asm contains: 45 insts, with 106 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 15 %
+fflush.o.asm contains: 103 insts, with 250 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 18 %
+ffsll.o.asm contains: 32 insts, with 98 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 35 %
+ffsl.o.asm contains: 13 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 35 %
+ffs.o.asm contains: 13 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 35 %
+fgetc.o.asm contains: 75 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 50 Byte == 25 %
+fgetgrent.o.asm contains: 19 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 27 %
+fgetln.o.asm contains: 69 insts, with 162 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 15 %
+fgetpos.o.asm contains: 17 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+fgetpwent.o.asm contains: 15 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 21 %
+fgets.o.asm contains: 121 insts, with 328 bytes
+  Improvement by replacing 32 with 16 Bit inst: 86 Byte == 26 %
+fgetspent.o.asm contains: 38 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 16 %
+fgetwc.o.asm contains: 130 insts, with 308 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 16 %
+fgetws.o.asm contains: 62 insts, with 148 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 16 %
+fileno.o.asm contains: 30 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 9 %
+finitef.o.asm contains: 5 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 29 %
+finite.o.asm contains: 5 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 38 %
+floatscan.o.asm contains: 3365 insts, with 10430 bytes
+  Improvement by replacing 32 with 16 Bit inst: 3700 Byte == 35 %
+flockfile.o.asm contains: 22 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+flock.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+floorf.o.asm contains: 50 insts, with 136 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 26 %
+floorl.o.asm contains: 241 insts, with 692 bytes
+  Improvement by replacing 32 with 16 Bit inst: 210 Byte == 30 %
+floor.o.asm contains: 96 insts, with 214 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 10 %
+__flt_rounds.o.asm contains: 16 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 16 %
+fmaf.o.asm contains: 186 insts, with 408 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 9 %
+fmal.o.asm contains: 1877 insts, with 5658 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1904 Byte == 34 %
+fma.o.asm contains: 691 insts, with 1968 bytes
+  Improvement by replacing 32 with 16 Bit inst: 586 Byte == 30 %
+fmaxf.o.asm contains: 29 insts, with 76 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 24 %
+fmaxl.o.asm contains: 104 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 11 %
+fmax.o.asm contains: 56 insts, with 142 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 21 %
+fmemopen.o.asm contains: 295 insts, with 750 bytes
+  Improvement by replacing 32 with 16 Bit inst: 160 Byte == 21 %
+fminf.o.asm contains: 30 insts, with 78 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 23 %
+fminl.o.asm contains: 104 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 11 %
+fmin.o.asm contains: 56 insts, with 142 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 21 %
+__fmodeflags.o.asm contains: 45 insts, with 120 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 25 %
+fmodf.o.asm contains: 103 insts, with 280 bytes
+  Improvement by replacing 32 with 16 Bit inst: 74 Byte == 26 %
+fmodl.o.asm contains: 446 insts, with 1312 bytes
+  Improvement by replacing 32 with 16 Bit inst: 420 Byte == 32 %
+fmod.o.asm contains: 212 insts, with 618 bytes
+  Improvement by replacing 32 with 16 Bit inst: 194 Byte == 31 %
+fmtmsg.o.asm contains: 219 insts, with 590 bytes
+  Improvement by replacing 32 with 16 Bit inst: 152 Byte == 26 %
+fnmatch.o.asm contains: 785 insts, with 2018 bytes
+  Improvement by replacing 32 with 16 Bit inst: 448 Byte == 22 %
+fopencookie.o.asm contains: 241 insts, with 602 bytes
+  Improvement by replacing 32 with 16 Bit inst: 120 Byte == 20 %
+fopen.o.asm contains: 57 insts, with 134 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 15 %
+__fopen_rb_ca.o.asm contains: 55 insts, with 136 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 19 %
+fork.o.asm contains: 131 insts, with 312 bytes
+  Improvement by replacing 32 with 16 Bit inst: 50 Byte == 16 %
+_Fork.o.asm contains: 63 insts, with 172 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 27 %
+forkpty.o.asm contains: 116 insts, with 280 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 17 %
+fpathconf.o.asm contains: 18 insts, with 44 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 18 %
+__fpclassifyf.o.asm contains: 14 insts, with 42 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 33 %
+__fpclassifyl.o.asm contains: 24 insts, with 58 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 17 %
+__fpclassify.o.asm contains: 17 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 29 %
+fprintf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fputc.o.asm contains: 88 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 25 %
+fputs.o.asm contains: 25 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+fputwc.o.asm contains: 114 insts, with 268 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 15 %
+fputws.o.asm contains: 64 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 31 %
+fread.o.asm contains: 83 insts, with 206 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 19 %
+freeaddrinfo.o.asm contains: 41 insts, with 102 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 20 %
+freelocale.o.asm contains: 17 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+free.o.asm contains: 450 insts, with 1302 bytes
+  Improvement by replacing 32 with 16 Bit inst: 402 Byte == 31 %
+freopen.o.asm contains: 100 insts, with 228 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 12 %
+frexpf.o.asm contains: 48 insts, with 112 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 14 %
+frexpl.o.asm contains: 103 insts, with 240 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 14 %
+frexp.o.asm contains: 52 insts, with 124 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 16 %
+fscanf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fseek.o.asm contains: 119 insts, with 272 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 12 %
+fsetpos.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fstatat.o.asm contains: 112 insts, with 344 bytes
+  Improvement by replacing 32 with 16 Bit inst: 120 Byte == 35 %
+fstat.o.asm contains: 10 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 23 %
+fsync.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+ftell.o.asm contains: 97 insts, with 216 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 10 %
+ftime.o.asm contains: 27 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 21 %
+ftok.o.asm contains: 21 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 9 %
+ftruncate.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+ftrylockfile.o.asm contains: 74 insts, with 212 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 30 %
+ftw.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+funlockfile.o.asm contains: 22 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+futimens.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+futimesat.o.asm contains: 42 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 22 %
+futimes.o.asm contains: 26 insts, with 58 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 10 %
+fwide.o.asm contains: 46 insts, with 118 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 22 %
+fwprintf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+fwrite.o.asm contains: 132 insts, with 320 bytes
+  Improvement by replacing 32 with 16 Bit inst: 56 Byte == 18 %
+fwscanf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+gai_strerror.o.asm contains: 17 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 29 %
+gcvt.o.asm contains: 16 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 11 %
+getaddrinfo.o.asm contains: 274 insts, with 774 bytes
+  Improvement by replacing 32 with 16 Bit inst: 226 Byte == 29 %
+getauxval.o.asm contains: 27 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 21 %
+getchar.o.asm contains: 88 insts, with 264 bytes
+  Improvement by replacing 32 with 16 Bit inst: 88 Byte == 33 %
+getchar_unlocked.o.asm contains: 11 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 39 %
+getc.o.asm contains: 75 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 50 Byte == 25 %
+getc_unlocked.o.asm contains: 9 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 25 %
+get_current_dir_name.o.asm contains: 50 insts, with 118 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 15 %
+getcwd.o.asm contains: 54 insts, with 122 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 11 %
+getdate.o.asm contains: 84 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 16 %
+getdelim.o.asm contains: 197 insts, with 546 bytes
+  Improvement by replacing 32 with 16 Bit inst: 152 Byte == 28 %
+getdents.o.asm contains: 8 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 27 %
+getdomainname.o.asm contains: 33 insts, with 88 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 25 %
+getdtablesize.o.asm contains: 17 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 11 %
+getegid.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+getentropy.o.asm contains: 50 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 7 %
+getenv.o.asm contains: 46 insts, with 118 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 22 %
+geteuid.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+getgid.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+getgr_a.o.asm contains: 337 insts, with 840 bytes
+  Improvement by replacing 32 with 16 Bit inst: 166 Byte == 20 %
+getgrent_a.o.asm contains: 163 insts, with 424 bytes
+  Improvement by replacing 32 with 16 Bit inst: 98 Byte == 23 %
+getgrent.o.asm contains: 86 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 26 %
+getgrouplist.o.asm contains: 229 insts, with 548 bytes
+  Improvement by replacing 32 with 16 Bit inst: 90 Byte == 16 %
+getgroups.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+getgr_r.o.asm contains: 125 insts, with 270 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 7 %
+gethostbyaddr.o.asm contains: 63 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 14 %
+gethostbyaddr_r.o.asm contains: 131 insts, with 344 bytes
+  Improvement by replacing 32 with 16 Bit inst: 82 Byte == 24 %
+gethostbyname2.o.asm contains: 59 insts, with 136 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 13 %
+gethostbyname2_r.o.asm contains: 163 insts, with 468 bytes
+  Improvement by replacing 32 with 16 Bit inst: 142 Byte == 30 %
+gethostbyname.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+gethostbyname_r.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+gethostid.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+gethostname.o.asm contains: 40 insts, with 114 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 30 %
+getifaddrs.o.asm contains: 411 insts, with 1142 bytes
+  Improvement by replacing 32 with 16 Bit inst: 320 Byte == 28 %
+getitimer.o.asm contains: 28 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 15 %
+getline.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+getloadavg.o.asm contains: 59 insts, with 158 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 25 %
+getlogin.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+getlogin_r.o.asm contains: 29 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+getnameinfo.o.asm contains: 496 insts, with 1452 bytes
+  Improvement by replacing 32 with 16 Bit inst: 460 Byte == 32 %
+getopt_long.o.asm contains: 341 insts, with 1020 bytes
+  Improvement by replacing 32 with 16 Bit inst: 338 Byte == 33 %
+getopt.o.asm contains: 258 insts, with 734 bytes
+  Improvement by replacing 32 with 16 Bit inst: 218 Byte == 30 %
+getpagesize.o.asm contains: 3 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 40 %
+getpass.o.asm contains: 97 insts, with 250 bytes
+  Improvement by replacing 32 with 16 Bit inst: 56 Byte == 22 %
+getpeername.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+getpgid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+getpgrp.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+getpid.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+getppid.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+getpriority.o.asm contains: 12 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 20 %
+getpw_a.o.asm contains: 248 insts, with 618 bytes
+  Improvement by replacing 32 with 16 Bit inst: 122 Byte == 20 %
+getpwent_a.o.asm contains: 143 insts, with 392 bytes
+  Improvement by replacing 32 with 16 Bit inst: 106 Byte == 27 %
+getpwent.o.asm contains: 74 insts, with 204 bytes
+  Improvement by replacing 32 with 16 Bit inst: 56 Byte == 27 %
+getpw_r.o.asm contains: 101 insts, with 214 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 6 %
+getrandom.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+getresgid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+getresuid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+getrlimit.o.asm contains: 31 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 9 %
+getrusage.o.asm contains: 38 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 12 %
+getservbyname.o.asm contains: 19 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 21 %
+getservbyname_r.o.asm contains: 96 insts, with 254 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 24 %
+getservbyport.o.asm contains: 19 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 24 %
+getservbyport_r.o.asm contains: 135 insts, with 340 bytes
+  Improvement by replacing 32 with 16 Bit inst: 70 Byte == 21 %
+getsid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+gets.o.asm contains: 65 insts, with 174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 25 %
+getsockname.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+getsockopt.o.asm contains: 73 insts, with 204 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 28 %
+getspent.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+getspnam.o.asm contains: 38 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 16 %
+getspnam_r.o.asm contains: 417 insts, with 1202 bytes
+  Improvement by replacing 32 with 16 Bit inst: 368 Byte == 31 %
+getsubopt.o.asm contains: 65 insts, with 154 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 16 %
+gettid.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+gettimeofday.o.asm contains: 28 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 15 %
+getuid.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+getusershell.o.asm contains: 73 insts, with 206 bytes
+  Improvement by replacing 32 with 16 Bit inst: 60 Byte == 29 %
+getwchar.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+getwc.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+getw.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+glob.o.asm contains: 738 insts, with 1954 bytes
+  Improvement by replacing 32 with 16 Bit inst: 478 Byte == 24 %
+gmtime.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+gmtime_r.o.asm contains: 27 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 18 %
+h_errno.o.asm contains: 9 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 25 %
+herror.o.asm contains: 31 insts, with 78 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 21 %
+hsearch.o.asm contains: 292 insts, with 682 bytes
+  Improvement by replacing 32 with 16 Bit inst: 98 Byte == 14 %
+hstrerror.o.asm contains: 17 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 29 %
+htonl.o.asm contains: 12 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 20 %
+htons.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+hypotf.o.asm contains: 106 insts, with 258 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 18 %
+hypotl.o.asm contains: 830 insts, with 2706 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1046 Byte == 39 %
+hypot.o.asm contains: 310 insts, with 682 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 9 %
+iconv_close.o.asm contains: 10 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 9 %
+iconv.o.asm contains: 1383 insts, with 4106 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1340 Byte == 33 %
+if_freenameindex.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+if_indextoname.o.asm contains: 50 insts, with 112 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 11 %
+if_nameindex.o.asm contains: 205 insts, with 564 bytes
+  Improvement by replacing 32 with 16 Bit inst: 154 Byte == 27 %
+if_nametoindex.o.asm contains: 39 insts, with 88 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 11 %
+ilogbf.o.asm contains: 44 insts, with 110 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 20 %
+ilogbl.o.asm contains: 112 insts, with 242 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 7 %
+ilogb.o.asm contains: 54 insts, with 136 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 21 %
+imaxabs.o.asm contains: 6 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 40 %
+imaxdiv.o.asm contains: 40 insts, with 94 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 15 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/in6addr_any.o.asm
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/in6addr_loopback.o.asm
+index.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+inet_addr.o.asm contains: 12 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+inet_aton.o.asm contains: 88 insts, with 216 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 19 %
+inet_legacy.o.asm contains: 40 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 26 %
+inet_ntoa.o.asm contains: 22 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 27 %
+inet_ntop.o.asm contains: 162 insts, with 446 bytes
+  Improvement by replacing 32 with 16 Bit inst: 122 Byte == 27 %
+inet_pton.o.asm contains: 196 insts, with 554 bytes
+  Improvement by replacing 32 with 16 Bit inst: 162 Byte == 29 %
+initgroups.o.asm contains: 18 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 10 %
+__init_tls.o.asm contains: 203 insts, with 552 bytes
+  Improvement by replacing 32 with 16 Bit inst: 146 Byte == 26 %
+inotify.o.asm contains: 17 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+insque.o.asm contains: 21 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 9 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/internal.o.asm
+intscan.o.asm contains: 493 insts, with 1434 bytes
+  Improvement by replacing 32 with 16 Bit inst: 448 Byte == 31 %
+__invtrigl.o.asm contains: 845 insts, with 2954 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1264 Byte == 43 %
+ioctl.o.asm contains: 186 insts, with 494 bytes
+  Improvement by replacing 32 with 16 Bit inst: 122 Byte == 25 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/ioperm.o.asm
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/iopl.o.asm
+isalnum.o.asm contains: 14 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 42 %
+isalpha.o.asm contains: 8 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 43 %
+isascii.o.asm contains: 2 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 33 %
+isastream.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+isatty.o.asm contains: 26 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 7 %
+isblank.o.asm contains: 12 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 33 %
+iscntrl.o.asm contains: 10 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 38 %
+isdigit.o.asm contains: 6 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 40 %
+isgraph.o.asm contains: 6 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 40 %
+islower.o.asm contains: 6 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 40 %
+isprint.o.asm contains: 6 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 25 %
+ispunct.o.asm contains: 26 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 24 %
+issetugid.o.asm contains: 3 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 40 %
+isspace.o.asm contains: 12 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 33 %
+isupper.o.asm contains: 6 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 40 %
+iswalnum.o.asm contains: 26 insts, with 64 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 19 %
+iswalpha.o.asm contains: 42 insts, with 124 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 32 %
+iswblank.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+iswcntrl.o.asm contains: 32 insts, with 88 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 27 %
+iswctype.o.asm contains: 73 insts, with 172 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 15 %
+iswdigit.o.asm contains: 6 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 40 %
+iswgraph.o.asm contains: 19 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 5 %
+iswlower.o.asm contains: 24 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 8 %
+iswprint.o.asm contains: 40 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 26 %
+iswpunct.o.asm contains: 38 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 30 %
+iswspace.o.asm contains: 24 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 20 %
+iswupper.o.asm contains: 24 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 8 %
+iswxdigit.o.asm contains: 14 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 42 %
+isxdigit.o.asm contains: 14 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 42 %
+j0f.o.asm contains: 735 insts, with 1770 bytes
+  Improvement by replacing 32 with 16 Bit inst: 300 Byte == 17 %
+j0.o.asm contains: 1053 insts, with 2532 bytes
+  Improvement by replacing 32 with 16 Bit inst: 426 Byte == 17 %
+j1f.o.asm contains: 758 insts, with 1818 bytes
+  Improvement by replacing 32 with 16 Bit inst: 302 Byte == 17 %
+j1.o.asm contains: 1029 insts, with 2470 bytes
+  Improvement by replacing 32 with 16 Bit inst: 412 Byte == 17 %
+jnf.o.asm contains: 489 insts, with 1144 bytes
+  Improvement by replacing 32 with 16 Bit inst: 166 Byte == 15 %
+jn.o.asm contains: 846 insts, with 1906 bytes
+  Improvement by replacing 32 with 16 Bit inst: 214 Byte == 11 %
+kill.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+killpg.o.asm contains: 15 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 12 %
+klogctl.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+labs.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+langinfo.o.asm contains: 83 insts, with 240 bytes
+  Improvement by replacing 32 with 16 Bit inst: 74 Byte == 31 %
+lchmod.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+lchown.o.asm contains: 9 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 25 %
+lckpwdf.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+lcong48.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+__lctrans.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+ldexpf.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ldexpl.o.asm contains: 28 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ldexp.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ldiv.o.asm contains: 5 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 38 %
+legacy.o.asm contains: 12 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 25 %
+lgammaf.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+lgammaf_r.o.asm contains: 867 insts, with 2164 bytes
+  Improvement by replacing 32 with 16 Bit inst: 430 Byte == 20 %
+lgammal.o.asm contains: 78 insts, with 160 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 3 %
+lgamma.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+lgamma_r.o.asm contains: 1251 insts, with 3174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 672 Byte == 21 %
+libc_calloc.o.asm contains: 76 insts, with 182 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 16 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/libc.o.asm
+__libc_start_main.o.asm contains: 187 insts, with 482 bytes
+  Improvement by replacing 32 with 16 Bit inst: 108 Byte == 22 %
+linkat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+link.o.asm contains: 9 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 25 %
+lio_listio.o.asm contains: 238 insts, with 566 bytes
+  Improvement by replacing 32 with 16 Bit inst: 90 Byte == 16 %
+listen.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+lite_malloc.o.asm contains: 189 insts, with 556 bytes
+  Improvement by replacing 32 with 16 Bit inst: 178 Byte == 32 %
+llabs.o.asm contains: 6 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 40 %
+lldiv.o.asm contains: 40 insts, with 94 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 15 %
+llrintf.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+llrintl.o.asm contains: 93 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 7 %
+llrint.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+llroundf.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+llroundl.o.asm contains: 28 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+llround.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+localeconv.o.asm contains: 3 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 40 %
+locale_map.o.asm contains: 229 insts, with 666 bytes
+  Improvement by replacing 32 with 16 Bit inst: 208 Byte == 31 %
+localtime.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+localtime_r.o.asm contains: 55 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 25 %
+__lockfile.o.asm contains: 76 insts, with 228 bytes
+  Improvement by replacing 32 with 16 Bit inst: 76 Byte == 33 %
+lockf.o.asm contains: 63 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 14 %
+__lock.o.asm contains: 91 insts, with 282 bytes
+  Improvement by replacing 32 with 16 Bit inst: 100 Byte == 35 %
+lock_ptc.o.asm contains: 12 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 33 %
+log10f.o.asm contains: 204 insts, with 484 bytes
+  Improvement by replacing 32 with 16 Bit inst: 76 Byte == 16 %
+log10l.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+log10.o.asm contains: 358 insts, with 840 bytes
+  Improvement by replacing 32 with 16 Bit inst: 124 Byte == 15 %
+log1pf.o.asm contains: 218 insts, with 518 bytes
+  Improvement by replacing 32 with 16 Bit inst: 82 Byte == 16 %
+log1pl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+log1p.o.asm contains: 337 insts, with 806 bytes
+  Improvement by replacing 32 with 16 Bit inst: 132 Byte == 16 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/log2_data.o.asm
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/log2f_data.o.asm
+log2f.o.asm contains: 192 insts, with 448 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 14 %
+log2l.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+log2.o.asm contains: 516 insts, with 1188 bytes
+  Improvement by replacing 32 with 16 Bit inst: 156 Byte == 13 %
+logbf.o.asm contains: 44 insts, with 94 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 6 %
+logbl.o.asm contains: 138 insts, with 330 bytes
+  Improvement by replacing 32 with 16 Bit inst: 54 Byte == 16 %
+logb.o.asm contains: 60 insts, with 124 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 3 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/log_data.o.asm
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/logf_data.o.asm
+logf.o.asm contains: 188 insts, with 440 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 15 %
+login_tty.o.asm contains: 37 insts, with 78 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 5 %
+logl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+log.o.asm contains: 505 insts, with 1156 bytes
+  Improvement by replacing 32 with 16 Bit inst: 146 Byte == 13 %
+longjmp.o.asm contains: 17 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 43 %
+lookup_ipliteral.o.asm contains: 117 insts, with 302 bytes
+  Improvement by replacing 32 with 16 Bit inst: 68 Byte == 23 %
+lookup_name.o.asm contains: 1061 insts, with 2936 bytes
+  Improvement by replacing 32 with 16 Bit inst: 814 Byte == 28 %
+lookup_serv.o.asm contains: 250 insts, with 738 bytes
+  Improvement by replacing 32 with 16 Bit inst: 238 Byte == 32 %
+lrand48.o.asm contains: 25 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 17 %
+lrintf.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+lrintl.o.asm contains: 91 insts, with 196 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 7 %
+lrint.o.asm contains: 105 insts, with 232 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 9 %
+lroundf.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+lroundl.o.asm contains: 28 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+lround.o.asm contains: 9 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+lsearch.o.asm contains: 86 insts, with 182 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 5 %
+lseek.o.asm contains: 20 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 20 %
+lstat.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+lutimes.o.asm contains: 30 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 14 %
+madvise.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+malloc.o.asm contains: 1288 insts, with 3834 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1258 Byte == 33 %
+malloc_usable_size.o.asm contains: 114 insts, with 374 bytes
+  Improvement by replacing 32 with 16 Bit inst: 146 Byte == 39 %
+__map_file.o.asm contains: 45 insts, with 106 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 15 %
+__math_divzerof.o.asm contains: 13 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 13 %
+__math_divzero.o.asm contains: 16 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 11 %
+__math_invalidf.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__math_invalidl.o.asm contains: 50 insts, with 100 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__math_invalid.o.asm contains: 13 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__math_oflowf.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+__math_oflow.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+__math_uflowf.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+__math_uflow.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+__math_xflowf.o.asm contains: 12 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+__math_xflow.o.asm contains: 16 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+mblen.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mbrlen.o.asm contains: 9 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 18 %
+mbrtoc16.o.asm contains: 54 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 22 %
+mbrtoc32.o.asm contains: 28 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 18 %
+mbrtowc.o.asm contains: 87 insts, with 268 bytes
+  Improvement by replacing 32 with 16 Bit inst: 94 Byte == 35 %
+mbsinit.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+mbsnrtowcs.o.asm contains: 122 insts, with 356 bytes
+  Improvement by replacing 32 with 16 Bit inst: 112 Byte == 31 %
+mbsrtowcs.o.asm contains: 241 insts, with 708 bytes
+  Improvement by replacing 32 with 16 Bit inst: 226 Byte == 32 %
+mbstowcs.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mbtowc.o.asm contains: 86 insts, with 244 bytes
+  Improvement by replacing 32 with 16 Bit inst: 72 Byte == 30 %
+memalign.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+membarrier.o.asm contains: 101 insts, with 270 bytes
+  Improvement by replacing 32 with 16 Bit inst: 68 Byte == 25 %
+memccpy.o.asm contains: 61 insts, with 180 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 32 %
+memchr.o.asm contains: 51 insts, with 156 bytes
+  Improvement by replacing 32 with 16 Bit inst: 54 Byte == 35 %
+memcmp.o.asm contains: 12 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 25 %
+memcpy.o.asm contains: 261 insts, with 858 bytes
+  Improvement by replacing 32 with 16 Bit inst: 336 Byte == 39 %
+memfd_create.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+memmem.o.asm contains: 378 insts, with 1046 bytes
+  Improvement by replacing 32 with 16 Bit inst: 290 Byte == 28 %
+memmove.o.asm contains: 95 insts, with 264 bytes
+  Improvement by replacing 32 with 16 Bit inst: 74 Byte == 28 %
+mempcpy.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+memrchr.o.asm contains: 12 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 29 %
+memset.o.asm contains: 62 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 33 %
+mincore.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+mkdirat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+mkdir.o.asm contains: 7 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 22 %
+mkdtemp.o.asm contains: 57 insts, with 132 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 14 %
+mkfifoat.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mkfifo.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mknodat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+mknod.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+mkostemp.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mkostemps.o.asm contains: 68 insts, with 168 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 19 %
+mkstemp.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mkstemps.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mktemp.o.asm contains: 54 insts, with 124 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 13 %
+mktime.o.asm contains: 87 insts, with 204 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 15 %
+mlock2.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+mlockall.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+mlock.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+mmap.o.asm contains: 73 insts, with 168 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 13 %
+mntent.o.asm contains: 248 insts, with 614 bytes
+  Improvement by replacing 32 with 16 Bit inst: 118 Byte == 19 %
+modff.o.asm contains: 39 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 28 %
+modfl.o.asm contains: 258 insts, with 730 bytes
+  Improvement by replacing 32 with 16 Bit inst: 214 Byte == 29 %
+modf.o.asm contains: 70 insts, with 202 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 31 %
+module.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+__mo_lookup.o.asm contains: 182 insts, with 504 bytes
+  Improvement by replacing 32 with 16 Bit inst: 140 Byte == 28 %
+__month_to_secs.o.asm contains: 15 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 35 %
+mount.o.asm contains: 13 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 19 %
+mprotect.o.asm contains: 14 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 30 %
+mq_close.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+mq_getattr.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mq_notify.o.asm contains: 193 insts, with 472 bytes
+  Improvement by replacing 32 with 16 Bit inst: 86 Byte == 18 %
+mq_open.o.asm contains: 25 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 17 %
+mq_receive.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mq_send.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mq_setattr.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+mq_timedreceive.o.asm contains: 28 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 7 %
+mq_timedsend.o.asm contains: 28 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 7 %
+mq_unlink.o.asm contains: 26 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 21 %
+mrand48.o.asm contains: 25 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 17 %
+mremap.o.asm contains: 48 insts, with 104 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 8 %
+msgctl.o.asm contains: 57 insts, with 130 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 12 %
+msgget.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+msgrcv.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+msgsnd.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+msync.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+mtx_destroy.o.asm contains: 1 insts, with 2 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+mtx_init.o.asm contains: 26 insts, with 54 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+mtx_lock.o.asm contains: 14 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 22 %
+mtx_timedlock.o.asm contains: 14 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 18 %
+mtx_trylock.o.asm contains: 24 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 23 %
+mtx_unlock.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+munlockall.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+munlock.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+munmap.o.asm contains: 19 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 5 %
+name_to_handle_at.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+nanf.o.asm contains: 2 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 33 %
+nanl.o.asm contains: 20 insts, with 42 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 5 %
+nan.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+nanosleep.o.asm contains: 13 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 7 %
+nearbyintf.o.asm contains: 23 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+nearbyintl.o.asm contains: 46 insts, with 106 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 13 %
+nearbyint.o.asm contains: 29 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 3 %
+netlink.o.asm contains: 150 insts, with 398 bytes
+  Improvement by replacing 32 with 16 Bit inst: 98 Byte == 25 %
+netname.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+newlocale.o.asm contains: 178 insts, with 482 bytes
+  Improvement by replacing 32 with 16 Bit inst: 126 Byte == 26 %
+nextafterf.o.asm contains: 65 insts, with 160 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 19 %
+nextafterl.o.asm contains: 245 insts, with 702 bytes
+  Improvement by replacing 32 with 16 Bit inst: 212 Byte == 30 %
+nextafter.o.asm contains: 112 insts, with 290 bytes
+  Improvement by replacing 32 with 16 Bit inst: 66 Byte == 23 %
+nexttowardf.o.asm contains: 159 insts, with 344 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 8 %
+nexttowardl.o.asm contains: 37 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+nexttoward.o.asm contains: 189 insts, with 430 bytes
+  Improvement by replacing 32 with 16 Bit inst: 52 Byte == 12 %
+nftw.o.asm contains: 380 insts, with 920 bytes
+  Improvement by replacing 32 with 16 Bit inst: 160 Byte == 17 %
+nice.o.asm contains: 37 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 14 %
+nscd_query.o.asm contains: 214 insts, with 520 bytes
+  Improvement by replacing 32 with 16 Bit inst: 92 Byte == 18 %
+ns_parse.o.asm contains: 335 insts, with 892 bytes
+  Improvement by replacing 32 with 16 Bit inst: 222 Byte == 25 %
+ntohl.o.asm contains: 12 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 20 %
+ntohs.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+ofl_add.o.asm contains: 19 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ofl.o.asm contains: 15 insts, with 42 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 29 %
+openat.o.asm contains: 33 insts, with 78 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 15 %
+open_by_handle_at.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+opendir.o.asm contains: 24 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 14 %
+open_memstream.o.asm contains: 198 insts, with 474 bytes
+  Improvement by replacing 32 with 16 Bit inst: 78 Byte == 16 %
+open.o.asm contains: 50 insts, with 120 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 17 %
+openpty.o.asm contains: 94 insts, with 224 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 16 %
+open_wmemstream.o.asm contains: 222 insts, with 550 bytes
+  Improvement by replacing 32 with 16 Bit inst: 106 Byte == 19 %
+__overflow.o.asm contains: 41 insts, with 100 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 18 %
+pathconf.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pause.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+pclose.o.asm contains: 26 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 7 %
+perror.o.asm contains: 87 insts, with 204 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 15 %
+personality.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+pipe2.o.asm contains: 64 insts, with 144 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 11 %
+pipe.o.asm contains: 5 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 17 %
+pivot_root.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+pleval.o.asm contains: 278 insts, with 770 bytes
+  Improvement by replacing 32 with 16 Bit inst: 214 Byte == 28 %
+__polevll.o.asm contains: 184 insts, with 426 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 14 %
+poll.o.asm contains: 34 insts, with 88 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 23 %
+popen.o.asm contains: 150 insts, with 356 bytes
+  Improvement by replacing 32 with 16 Bit inst: 56 Byte == 16 %
+posix_close.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+posix_fadvise.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+posix_fallocate.o.asm contains: 9 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 18 %
+posix_madvise.o.asm contains: 8 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 27 %
+posix_memalign.o.asm contains: 26 insts, with 54 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+posix_spawnattr_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+posix_spawnattr_getflags.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+posix_spawnattr_getpgroup.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+posix_spawnattr_getsigdefault.o.asm contains: 12 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 14 %
+posix_spawnattr_getsigmask.o.asm contains: 12 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 14 %
+posix_spawnattr_init.o.asm contains: 10 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 9 %
+posix_spawnattr_sched.o.asm contains: 8 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 33 %
+posix_spawnattr_setflags.o.asm contains: 9 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 18 %
+posix_spawnattr_setpgroup.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+posix_spawnattr_setsigdefault.o.asm contains: 10 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 9 %
+posix_spawnattr_setsigmask.o.asm contains: 10 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 17 %
+posix_spawn_file_actions_addchdir.o.asm contains: 38 insts, with 84 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 10 %
+posix_spawn_file_actions_addclose.o.asm contains: 31 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+posix_spawn_file_actions_adddup2.o.asm contains: 36 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 10 %
+posix_spawn_file_actions_addfchdir.o.asm contains: 31 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+posix_spawn_file_actions_addopen.o.asm contains: 51 insts, with 116 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 12 %
+posix_spawn_file_actions_destroy.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+posix_spawn_file_actions_init.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+posix_spawn.o.asm contains: 352 insts, with 964 bytes
+  Improvement by replacing 32 with 16 Bit inst: 260 Byte == 27 %
+posix_spawnp.o.asm contains: 45 insts, with 128 bytes
+  Improvement by replacing 32 with 16 Bit inst: 38 Byte == 30 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/pow_data.o.asm
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/powf_data.o.asm
+powf.o.asm contains: 485 insts, with 1160 bytes
+  Improvement by replacing 32 with 16 Bit inst: 190 Byte == 16 %
+powl.o.asm contains: 65 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 6 %
+pow.o.asm contains: 1035 insts, with 2464 bytes
+  Improvement by replacing 32 with 16 Bit inst: 394 Byte == 16 %
+ppoll.o.asm contains: 29 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+prctl.o.asm contains: 32 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+pread.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+preadv2.o.asm contains: 29 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 15 %
+preadv.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+printf.o.asm contains: 21 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 9 %
+prlimit.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+process_vm.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+procfdname.o.asm contains: 55 insts, with 192 bytes
+  Improvement by replacing 32 with 16 Bit inst: 82 Byte == 43 %
+proto.o.asm contains: 77 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 23 %
+pselect.o.asm contains: 32 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 9 %
+psiginfo.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+psignal.o.asm contains: 74 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 38 Byte == 20 %
+pthread_atfork.o.asm contains: 95 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 19 %
+pthread_attr_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_attr_get.o.asm contains: 80 insts, with 164 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 2 %
+pthread_attr_init.o.asm contains: 29 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 17 %
+pthread_attr_setdetachstate.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+pthread_attr_setguardsize.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+pthread_attr_setinheritsched.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+pthread_attr_setschedparam.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_attr_setschedpolicy.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_attr_setscope.o.asm contains: 8 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 27 %
+pthread_attr_setstack.o.asm contains: 13 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 24 %
+pthread_attr_setstacksize.o.asm contains: 12 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 29 %
+pthread_barrierattr_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_barrierattr_init.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+pthread_barrierattr_setpshared.o.asm contains: 9 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 18 %
+pthread_barrier_destroy.o.asm contains: 38 insts, with 96 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 21 %
+pthread_barrier_init.o.asm contains: 27 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+pthread_barrier_wait.o.asm contains: 342 insts, with 992 bytes
+  Improvement by replacing 32 with 16 Bit inst: 308 Byte == 31 %
+pthread_cancel.o.asm contains: 181 insts, with 466 bytes
+  Improvement by replacing 32 with 16 Bit inst: 104 Byte == 22 %
+pthread_cleanup_push.o.asm contains: 26 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_condattr_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_condattr_init.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+pthread_condattr_setclock.o.asm contains: 15 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 21 %
+pthread_condattr_setpshared.o.asm contains: 12 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+pthread_cond_broadcast.o.asm contains: 29 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 28 %
+pthread_cond_destroy.o.asm contains: 56 insts, with 152 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 26 %
+pthread_cond_init.o.asm contains: 30 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+pthread_cond_signal.o.asm contains: 29 insts, with 78 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 26 %
+pthread_cond_timedwait.o.asm contains: 547 insts, with 1510 bytes
+  Improvement by replacing 32 with 16 Bit inst: 416 Byte == 28 %
+pthread_cond_wait.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_create.o.asm contains: 704 insts, with 1910 bytes
+  Improvement by replacing 32 with 16 Bit inst: 502 Byte == 26 %
+pthread_detach.o.asm contains: 29 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+pthread_equal.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+pthread_getattr_np.o.asm contains: 77 insts, with 196 bytes
+  Improvement by replacing 32 with 16 Bit inst: 42 Byte == 21 %
+pthread_getconcurrency.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_getcpuclockid.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+pthread_getname_np.o.asm contains: 80 insts, with 184 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 13 %
+pthread_getschedparam.o.asm contains: 45 insts, with 100 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 10 %
+pthread_getspecific.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+pthread_join.o.asm contains: 90 insts, with 216 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 17 %
+pthread_key_create.o.asm contains: 195 insts, with 512 bytes
+  Improvement by replacing 32 with 16 Bit inst: 122 Byte == 24 %
+pthread_kill.o.asm contains: 37 insts, with 84 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 12 %
+pthread_mutexattr_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_mutexattr_init.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+pthread_mutexattr_setprotocol.o.asm contains: 37 insts, with 98 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 24 %
+pthread_mutexattr_setpshared.o.asm contains: 11 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 15 %
+pthread_mutexattr_setrobust.o.asm contains: 30 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 25 %
+pthread_mutexattr_settype.o.asm contains: 10 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 9 %
+pthread_mutex_consistent.o.asm contains: 31 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 31 %
+pthread_mutex_destroy.o.asm contains: 11 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 15 %
+pthread_mutex_getprioceiling.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_mutex_init.o.asm contains: 25 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_mutex_lock.o.asm contains: 15 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 25 %
+pthread_mutex_setprioceiling.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_mutex_timedlock.o.asm contains: 191 insts, with 538 bytes
+  Improvement by replacing 32 with 16 Bit inst: 156 Byte == 29 %
+pthread_mutex_trylock.o.asm contains: 117 insts, with 348 bytes
+  Improvement by replacing 32 with 16 Bit inst: 114 Byte == 33 %
+pthread_mutex_unlock.o.asm contains: 132 insts, with 382 bytes
+  Improvement by replacing 32 with 16 Bit inst: 118 Byte == 31 %
+pthread_once.o.asm contains: 113 insts, with 298 bytes
+  Improvement by replacing 32 with 16 Bit inst: 72 Byte == 24 %
+pthread_rwlockattr_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_rwlockattr_init.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+pthread_rwlockattr_setpshared.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+pthread_rwlock_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_rwlock_init.o.asm contains: 26 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 7 %
+pthread_rwlock_rdlock.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_rwlock_timedrdlock.o.asm contains: 74 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 52 Byte == 26 %
+pthread_rwlock_timedwrlock.o.asm contains: 70 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 25 %
+pthread_rwlock_tryrdlock.o.asm contains: 20 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 35 %
+pthread_rwlock_trywrlock.o.asm contains: 10 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 33 %
+pthread_rwlock_unlock.o.asm contains: 40 insts, with 128 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 38 %
+pthread_rwlock_wrlock.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_self.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+pthread_setattr_default_np.o.asm contains: 86 insts, with 216 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 20 %
+pthread_setcancelstate.o.asm contains: 11 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 21 %
+pthread_setcanceltype.o.asm contains: 20 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 13 %
+pthread_setconcurrency.o.asm contains: 7 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 22 %
+pthread_setname_np.o.asm contains: 82 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 12 %
+pthread_setschedparam.o.asm contains: 39 insts, with 84 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+pthread_setschedprio.o.asm contains: 33 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 8 %
+pthread_setspecific.o.asm contains: 12 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 29 %
+pthread_sigmask.o.asm contains: 24 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 20 %
+pthread_spin_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pthread_spin_init.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+pthread_spin_lock.o.asm contains: 12 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 25 %
+pthread_spin_trylock.o.asm contains: 8 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 27 %
+pthread_spin_unlock.o.asm contains: 5 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 38 %
+pthread_testcancel.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ptrace.o.asm contains: 33 insts, with 78 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 15 %
+ptsname.o.asm contains: 22 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 8 %
+pty.o.asm contains: 65 insts, with 160 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 19 %
+putchar.o.asm contains: 99 insts, with 290 bytes
+  Improvement by replacing 32 with 16 Bit inst: 92 Byte == 32 %
+putchar_unlocked.o.asm contains: 17 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 35 %
+putc.o.asm contains: 88 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 25 %
+putc_unlocked.o.asm contains: 15 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 25 %
+putenv.o.asm contains: 112 insts, with 274 bytes
+  Improvement by replacing 32 with 16 Bit inst: 50 Byte == 18 %
+putgrent.o.asm contains: 70 insts, with 172 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 19 %
+putpwent.o.asm contains: 19 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 21 %
+puts.o.asm contains: 56 insts, with 148 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 24 %
+putspent.o.asm contains: 74 insts, with 216 bytes
+  Improvement by replacing 32 with 16 Bit inst: 68 Byte == 31 %
+putwchar.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+putwc.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+putw.o.asm contains: 13 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+pwrite.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+pwritev2.o.asm contains: 29 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 15 %
+pwritev.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+qsort_nr.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+qsort.o.asm contains: 555 insts, with 1544 bytes
+  Improvement by replacing 32 with 16 Bit inst: 434 Byte == 28 %
+quick_exit.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+quotactl.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+raise.o.asm contains: 23 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 8 %
+__rand48_step.o.asm contains: 28 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 38 %
+__randname.o.asm contains: 33 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 18 %
+rand.o.asm contains: 25 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 42 %
+random.o.asm contains: 250 insts, with 714 bytes
+  Improvement by replacing 32 with 16 Bit inst: 214 Byte == 30 %
+rand_r.o.asm contains: 24 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 31 %
+readahead.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+readdir.o.asm contains: 41 insts, with 100 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 18 %
+readdir_r.o.asm contains: 52 insts, with 116 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 10 %
+readlinkat.o.asm contains: 23 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 23 %
+readlink.o.asm contains: 25 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 24 %
+read.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+readv.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+reallocarray.o.asm contains: 16 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 11 %
+realloc.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+realpath.o.asm contains: 316 insts, with 934 bytes
+  Improvement by replacing 32 with 16 Bit inst: 302 Byte == 32 %
+reboot.o.asm contains: 9 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 36 %
+recvfrom.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+recvmmsg.o.asm contains: 29 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+recvmsg.o.asm contains: 128 insts, with 302 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 15 %
+recv.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+regcomp.o.asm contains: 4457 insts, with 11332 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2418 Byte == 21 %
+regerror.o.asm contains: 41 insts, with 98 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 16 %
+regexec.o.asm contains: 1836 insts, with 4880 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1208 Byte == 25 %
+remainderf.o.asm contains: 8 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+remainderl.o.asm contains: 38 insts, with 82 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+remainder.o.asm contains: 8 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+remap_file_pages.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+remove.o.asm contains: 13 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 32 %
+__rem_pio2f.o.asm contains: 224 insts, with 556 bytes
+  Improvement by replacing 32 with 16 Bit inst: 108 Byte == 19 %
+__rem_pio2_large.o.asm contains: 747 insts, with 1892 bytes
+  Improvement by replacing 32 with 16 Bit inst: 398 Byte == 21 %
+__rem_pio2l.o.asm contains: 1055 insts, with 3470 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1360 Byte == 39 %
+__rem_pio2.o.asm contains: 783 insts, with 1978 bytes
+  Improvement by replacing 32 with 16 Bit inst: 412 Byte == 21 %
+remquof.o.asm contains: 167 insts, with 458 bytes
+  Improvement by replacing 32 with 16 Bit inst: 124 Byte == 27 %
+remquol.o.asm contains: 497 insts, with 1518 bytes
+  Improvement by replacing 32 with 16 Bit inst: 524 Byte == 35 %
+remquo.o.asm contains: 268 insts, with 768 bytes
+  Improvement by replacing 32 with 16 Bit inst: 232 Byte == 30 %
+renameat.o.asm contains: 5 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 17 %
+rename.o.asm contains: 9 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 25 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/replaced.o.asm
+__reset_tls.o.asm contains: 45 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 17 %
+res_init.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+res_mkquery.o.asm contains: 123 insts, with 360 bytes
+  Improvement by replacing 32 with 16 Bit inst: 114 Byte == 32 %
+res_msend.o.asm contains: 893 insts, with 2638 bytes
+  Improvement by replacing 32 with 16 Bit inst: 852 Byte == 32 %
+resolvconf.o.asm contains: 293 insts, with 842 bytes
+  Improvement by replacing 32 with 16 Bit inst: 256 Byte == 30 %
+res_querydomain.o.asm contains: 64 insts, with 192 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 33 %
+res_query.o.asm contains: 51 insts, with 130 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 22 %
+res_send.o.asm contains: 49 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 33 %
+res_state.o.asm contains: 3 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 40 %
+restore.o.asm contains: 2 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 33 %
+rewinddir.o.asm contains: 26 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 16 %
+rewind.o.asm contains: 42 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+rindex.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+rintf.o.asm contains: 42 insts, with 100 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 16 %
+rintl.o.asm contains: 166 insts, with 434 bytes
+  Improvement by replacing 32 with 16 Bit inst: 102 Byte == 24 %
+rint.o.asm contains: 59 insts, with 140 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 16 %
+rmdir.o.asm contains: 7 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 30 %
+roundf.o.asm contains: 82 insts, with 192 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 15 %
+roundl.o.asm contains: 267 insts, with 782 bytes
+  Improvement by replacing 32 with 16 Bit inst: 248 Byte == 32 %
+round.o.asm contains: 109 insts, with 246 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 11 %
+sbrk.o.asm contains: 12 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+scalbf.o.asm contains: 83 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 17 %
+scalblnf.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+scalblnl.o.asm contains: 28 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+scalbln.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+scalbnf.o.asm contains: 46 insts, with 140 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 34 %
+scalbnl.o.asm contains: 160 insts, with 396 bytes
+  Improvement by replacing 32 with 16 Bit inst: 76 Byte == 19 %
+scalbn.o.asm contains: 52 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 42 Byte == 29 %
+scalb.o.asm contains: 122 insts, with 282 bytes
+  Improvement by replacing 32 with 16 Bit inst: 38 Byte == 13 %
+scandir.o.asm contains: 121 insts, with 274 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 12 %
+scanf.o.asm contains: 16 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sched_cpucount.o.asm contains: 18 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 22 %
+sched_getcpu.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+sched_getparam.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+sched_get_priority_max.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+sched_getscheduler.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+sched_rr_get_interval.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+sched_setparam.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+sched_setscheduler.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+sched_yield.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+__secs_to_tm.o.asm contains: 225 insts, with 674 bytes
+  Improvement by replacing 32 with 16 Bit inst: 224 Byte == 33 %
+secure_getenv.o.asm contains: 7 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 22 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/__seed48.o.asm
+seed48.o.asm contains: 27 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 13 %
+seekdir.o.asm contains: 29 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+select.o.asm contains: 104 insts, with 252 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 17 %
+semctl.o.asm contains: 76 insts, with 176 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 14 %
+sem_destroy.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+semget.o.asm contains: 10 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 23 %
+sem_getvalue.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sem_init.o.asm contains: 19 insts, with 44 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 14 %
+sem_open.o.asm contains: 381 insts, with 1022 bytes
+  Improvement by replacing 32 with 16 Bit inst: 260 Byte == 25 %
+semop.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+sem_post.o.asm contains: 46 insts, with 136 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 32 %
+semtimedop.o.asm contains: 19 insts, with 42 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 10 %
+sem_timedwait.o.asm contains: 87 insts, with 218 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 20 %
+sem_trywait.o.asm contains: 21 insts, with 54 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 22 %
+sem_unlink.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sem_wait.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sendfile.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+sendmmsg.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+sendmsg.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+send.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sendto.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+serv.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+setbuffer.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+setbuf.o.asm contains: 5 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 29 %
+setdomainname.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setegid.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+setenv.o.asm contains: 123 insts, with 294 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 16 %
+seteuid.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+setfsgid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setfsuid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setgid.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+setgroups.o.asm contains: 45 insts, with 102 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 12 %
+sethostname.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setitimer.o.asm contains: 51 insts, with 120 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 15 %
+setjmp.o.asm contains: 16 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 43 %
+setlinebuf.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+setlocale.o.asm contains: 154 insts, with 412 bytes
+  Improvement by replacing 32 with 16 Bit inst: 104 Byte == 25 %
+setns.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setpgid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setpgrp.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+setpriority.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setregid.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+setresgid.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+setresuid.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+setreuid.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+setrlimit.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+setsid.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+setsockopt.o.asm contains: 74 insts, with 202 bytes
+  Improvement by replacing 32 with 16 Bit inst: 54 Byte == 27 %
+__set_thread_area.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+settimeofday.o.asm contains: 28 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 18 %
+setuid.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+setvbuf.o.asm contains: 29 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 19 %
+setxid.o.asm contains: 50 insts, with 114 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 12 %
+shgetc.o.asm contains: 113 insts, with 314 bytes
+  Improvement by replacing 32 with 16 Bit inst: 88 Byte == 28 %
+shmat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+shmctl.o.asm contains: 57 insts, with 130 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 12 %
+shmdt.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+shmget.o.asm contains: 6 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 25 %
+shm_open.o.asm contains: 121 insts, with 320 bytes
+  Improvement by replacing 32 with 16 Bit inst: 78 Byte == 24 %
+shutdown.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+sigaction.o.asm contains: 166 insts, with 422 bytes
+  Improvement by replacing 32 with 16 Bit inst: 90 Byte == 21 %
+sigaddset.o.asm contains: 27 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 18 %
+sigaltstack.o.asm contains: 29 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+sigandset.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sigdelset.o.asm contains: 29 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 19 %
+sigemptyset.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+sigfillset.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+sighold.o.asm contains: 23 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+sigignore.o.asm contains: 19 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+siginterrupt.o.asm contains: 28 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 7 %
+sigisemptyset.o.asm contains: 12 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 14 %
+sigismember.o.asm contains: 12 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 25 %
+siglongjmp.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+signalfd.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+signal.o.asm contains: 27 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 23 %
+__signbitf.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__signbitl.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__signbit.o.asm contains: 2 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 33 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/signgam.o.asm
+significandf.o.asm contains: 13 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 7 %
+significand.o.asm contains: 17 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+sigorset.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sigpause.o.asm contains: 20 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sigpending.o.asm contains: 5 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 17 %
+sigprocmask.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sigqueue.o.asm contains: 44 insts, with 108 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 19 %
+sigrelse.o.asm contains: 23 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+sigrtmax.o.asm contains: 2 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 33 %
+sigrtmin.o.asm contains: 2 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 33 %
+sigsetjmp.o.asm contains: 14 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 22 %
+sigsetjmp_tail.o.asm contains: 13 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 28 %
+sigset.o.asm contains: 60 insts, with 156 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 23 %
+sigsuspend.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+sigtimedwait.o.asm contains: 40 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+sigwaitinfo.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sigwait.o.asm contains: 18 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 5 %
+sincosf.o.asm contains: 273 insts, with 686 bytes
+  Improvement by replacing 32 with 16 Bit inst: 140 Byte == 20 %
+sincosl.o.asm contains: 315 insts, with 966 bytes
+  Improvement by replacing 32 with 16 Bit inst: 336 Byte == 35 %
+sincos.o.asm contains: 136 insts, with 356 bytes
+  Improvement by replacing 32 with 16 Bit inst: 84 Byte == 24 %
+__sindf.o.asm contains: 105 insts, with 242 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 13 %
+sinf.o.asm contains: 147 insts, with 386 bytes
+  Improvement by replacing 32 with 16 Bit inst: 92 Byte == 24 %
+sinhf.o.asm contains: 101 insts, with 226 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 11 %
+sinhl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sinh.o.asm contains: 134 insts, with 292 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 8 %
+__sinl.o.asm contains: 796 insts, with 2674 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1082 Byte == 40 %
+sinl.o.asm contains: 269 insts, with 784 bytes
+  Improvement by replacing 32 with 16 Bit inst: 246 Byte == 31 %
+__sin.o.asm contains: 187 insts, with 438 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 15 %
+sin.o.asm contains: 106 insts, with 236 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 10 %
+sleep.o.asm contains: 16 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+snprintf.o.asm contains: 14 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+sockatmark.o.asm contains: 13 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 7 %
+socket.o.asm contains: 45 insts, with 120 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 25 %
+socketpair.o.asm contains: 78 insts, with 196 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 20 %
+splice.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+sprintf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/sqrt_data.o.asm
+sqrtf.o.asm contains: 76 insts, with 218 bytes
+  Improvement by replacing 32 with 16 Bit inst: 66 Byte == 30 %
+sqrtl.o.asm contains: 506 insts, with 1554 bytes
+  Improvement by replacing 32 with 16 Bit inst: 542 Byte == 35 %
+sqrt.o.asm contains: 146 insts, with 442 bytes
+  Improvement by replacing 32 with 16 Bit inst: 150 Byte == 34 %
+srand48.o.asm contains: 14 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 26 %
+sscanf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__stack_chk_fail.o.asm contains: 26 insts, with 74 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 30 %
+stat.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+statvfs.o.asm contains: 180 insts, with 396 bytes
+  Improvement by replacing 32 with 16 Bit inst: 36 Byte == 9 %
+statx.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/stderr.o.asm
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/stdin.o.asm
+__stdio_close.o.asm contains: 12 insts, with 26 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+__stdio_exit.o.asm contains: 61 insts, with 144 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 15 %
+__stdio_read.o.asm contains: 60 insts, with 138 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 13 %
+__stdio_seek.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__stdio_write.o.asm contains: 86 insts, with 232 bytes
+  Improvement by replacing 32 with 16 Bit inst: 60 Byte == 26 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/stdout.o.asm
+__stdout_write.o.asm contains: 28 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 15 %
+stime.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+stpcpy.o.asm contains: 48 insts, with 140 bytes
+  Improvement by replacing 32 with 16 Bit inst: 44 Byte == 31 %
+stpncpy.o.asm contains: 68 insts, with 178 bytes
+  Improvement by replacing 32 with 16 Bit inst: 42 Byte == 24 %
+strcasecmp.o.asm contains: 84 insts, with 216 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 22 %
+strcasestr.o.asm contains: 30 insts, with 64 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+strcat.o.asm contains: 18 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+strchrnul.o.asm contains: 67 insts, with 182 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 26 %
+strchr.o.asm contains: 16 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 16 %
+strcmp.o.asm contains: 20 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 35 %
+strcoll.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+strcpy.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+strcspn.o.asm contains: 60 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 18 %
+strdup.o.asm contains: 25 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+strerror.o.asm contains: 30 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 33 %
+strerror_r.o.asm contains: 39 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 9 %
+strfmon.o.asm contains: 202 insts, with 564 bytes
+  Improvement by replacing 32 with 16 Bit inst: 160 Byte == 28 %
+strftime.o.asm contains: 733 insts, with 2124 bytes
+  Improvement by replacing 32 with 16 Bit inst: 658 Byte == 31 %
+strlcat.o.asm contains: 31 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 9 %
+strlcpy.o.asm contains: 86 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 26 %
+strlen.o.asm contains: 36 insts, with 100 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 28 %
+strncasecmp.o.asm contains: 104 insts, with 268 bytes
+  Improvement by replacing 32 with 16 Bit inst: 60 Byte == 22 %
+strncat.o.asm contains: 30 insts, with 68 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+strncmp.o.asm contains: 25 insts, with 74 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 32 %
+strncpy.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+strndup.o.asm contains: 28 insts, with 58 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 3 %
+strnlen.o.asm contains: 18 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 5 %
+strpbrk.o.asm contains: 15 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 12 %
+strptime.o.asm contains: 430 insts, with 1164 bytes
+  Improvement by replacing 32 with 16 Bit inst: 304 Byte == 26 %
+strrchr.o.asm contains: 17 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+strsep.o.asm contains: 22 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 12 %
+strsignal.o.asm contains: 13 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 32 %
+strspn.o.asm contains: 59 insts, with 148 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 20 %
+strstr.o.asm contains: 367 insts, with 1032 bytes
+  Improvement by replacing 32 with 16 Bit inst: 298 Byte == 29 %
+strtod_l.o.asm contains: 23 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+strtod.o.asm contains: 112 insts, with 230 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 3 %
+strtok.o.asm contains: 38 insts, with 96 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 21 %
+strtok_r.o.asm contains: 38 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 16 %
+strtol.o.asm contains: 78 insts, with 166 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 6 %
+strverscmp.o.asm contains: 89 insts, with 274 bytes
+  Improvement by replacing 32 with 16 Bit inst: 96 Byte == 35 %
+strxfrm.o.asm contains: 53 insts, with 110 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 4 %
+swab.o.asm contains: 14 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 30 %
+swap.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+swprintf.o.asm contains: 14 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+swscanf.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+symlinkat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+symlink.o.asm contains: 6 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 25 %
+synccall.o.asm contains: 229 insts, with 650 bytes
+  Improvement by replacing 32 with 16 Bit inst: 192 Byte == 30 %
+sync_file_range.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+syncfs.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+sync.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+__syscall_cp.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+syscall_cp.o.asm contains: 15 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 12 %
+syscall.o.asm contains: 25 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+syscall_ret.o.asm contains: 15 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 12 %
+sysconf.o.asm contains: 139 insts, with 384 bytes
+  Improvement by replacing 32 with 16 Bit inst: 106 Byte == 28 %
+sysinfo.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+syslog.o.asm contains: 355 insts, with 976 bytes
+  Improvement by replacing 32 with 16 Bit inst: 266 Byte == 27 %
+system.o.asm contains: 143 insts, with 344 bytes
+  Improvement by replacing 32 with 16 Bit inst: 58 Byte == 17 %
+__tandf.o.asm contains: 153 insts, with 356 bytes
+  Improvement by replacing 32 with 16 Bit inst: 50 Byte == 14 %
+tanf.o.asm contains: 108 insts, with 296 bytes
+  Improvement by replacing 32 with 16 Bit inst: 80 Byte == 27 %
+tanhf.o.asm contains: 123 insts, with 272 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 10 %
+tanhl.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+tanh.o.asm contains: 150 insts, with 328 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 9 %
+__tanl.o.asm contains: 2224 insts, with 7824 bytes
+  Improvement by replacing 32 with 16 Bit inst: 3376 Byte == 43 %
+tanl.o.asm contains: 205 insts, with 572 bytes
+  Improvement by replacing 32 with 16 Bit inst: 162 Byte == 28 %
+__tan.o.asm contains: 398 insts, with 948 bytes
+  Improvement by replacing 32 with 16 Bit inst: 152 Byte == 16 %
+tan.o.asm contains: 77 insts, with 178 bytes
+  Improvement by replacing 32 with 16 Bit inst: 24 Byte == 13 %
+tcdrain.o.asm contains: 16 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+tcflow.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+tcflush.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+tcgetattr.o.asm contains: 12 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 14 %
+tcgetpgrp.o.asm contains: 13 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 7 %
+tcgetsid.o.asm contains: 13 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 7 %
+tcgetwinsize.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+tcsendbreak.o.asm contains: 5 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 17 %
+tcsetattr.o.asm contains: 18 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 10 %
+tcsetpgrp.o.asm contains: 11 insts, with 24 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 8 %
+tcsetwinsize.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+tdelete.o.asm contains: 84 insts, with 214 bytes
+  Improvement by replacing 32 with 16 Bit inst: 46 Byte == 21 %
+tdestroy.o.asm contains: 25 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+tee.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+telldir.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+tempnam.o.asm contains: 93 insts, with 274 bytes
+  Improvement by replacing 32 with 16 Bit inst: 88 Byte == 32 %
+textdomain.o.asm contains: 60 insts, with 152 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 21 %
+tfind.o.asm contains: 28 insts, with 58 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 3 %
+tgammaf.o.asm contains: 11 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+tgammal.o.asm contains: 36 insts, with 72 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+tgamma.o.asm contains: 509 insts, with 1166 bytes
+  Improvement by replacing 32 with 16 Bit inst: 148 Byte == 13 %
+thrd_create.o.asm contains: 16 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 16 %
+thrd_exit.o.asm contains: 4 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+thrd_join.o.asm contains: 15 insts, with 30 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+thrd_sleep.o.asm contains: 17 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 15 %
+thrd_yield.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+__timedwait.o.asm contains: 131 insts, with 314 bytes
+  Improvement by replacing 32 with 16 Bit inst: 52 Byte == 17 %
+timegm.o.asm contains: 39 insts, with 92 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 15 %
+time.o.asm contains: 17 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+timer_create.o.asm contains: 246 insts, with 624 bytes
+  Improvement by replacing 32 with 16 Bit inst: 132 Byte == 21 %
+timer_delete.o.asm contains: 17 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 29 %
+timerfd.o.asm contains: 34 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 18 Byte == 21 %
+timer_getoverrun.o.asm contains: 9 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 18 %
+timer_gettime.o.asm contains: 9 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 18 %
+timer_settime.o.asm contains: 31 insts, with 78 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 21 %
+times.o.asm contains: 3 insts, with 8 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 25 %
+timespec_get.o.asm contains: 16 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 11 %
+tlsdesc.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__tls_get_addr.o.asm contains: 9 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 10 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/tls.o.asm
+tmpfile.o.asm contains: 54 insts, with 136 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 21 %
+tmpnam.o.asm contains: 44 insts, with 114 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 23 %
+__tm_to_secs.o.asm contains: 86 insts, with 236 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 27 %
+toascii.o.asm contains: 2 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 33 %
+tolower.o.asm contains: 10 insts, with 28 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 29 %
+__toread.o.asm contains: 39 insts, with 92 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 15 %
+toupper.o.asm contains: 10 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 38 %
+towctrans.o.asm contains: 100 insts, with 306 bytes
+  Improvement by replacing 32 with 16 Bit inst: 106 Byte == 35 %
+__towrite.o.asm contains: 24 insts, with 58 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 17 %
+tre-mem.o.asm contains: 123 insts, with 274 bytes
+  Improvement by replacing 32 with 16 Bit inst: 28 Byte == 10 %
+truncate.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+truncf.o.asm contains: 32 insts, with 84 bytes
+  Improvement by replacing 32 with 16 Bit inst: 20 Byte == 24 %
+truncl.o.asm contains: 221 insts, with 616 bytes
+  Improvement by replacing 32 with 16 Bit inst: 174 Byte == 28 %
+trunc.o.asm contains: 57 insts, with 148 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 23 %
+tsearch.o.asm contains: 133 insts, with 350 bytes
+  Improvement by replacing 32 with 16 Bit inst: 84 Byte == 24 %
+tss_create.o.asm contains: 9 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 10 %
+tss_delete.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+tss_set.o.asm contains: 12 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 29 %
+ttyname.o.asm contains: 22 insts, with 50 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 12 %
+ttyname_r.o.asm contains: 65 insts, with 160 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 19 %
+twalk.o.asm contains: 49 insts, with 102 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 4 %
+__tz.o.asm contains: 1279 insts, with 3794 bytes
+  Improvement by replacing 32 with 16 Bit inst: 1236 Byte == 33 %
+ualarm.o.asm contains: 24 insts, with 54 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 11 %
+__uflow.o.asm contains: 25 insts, with 56 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 11 %
+ulimit.o.asm contains: 43 insts, with 92 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+umask.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+uname.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+ungetc.o.asm contains: 52 insts, with 120 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 13 %
+ungetwc.o.asm contains: 81 insts, with 196 bytes
+  Improvement by replacing 32 with 16 Bit inst: 34 Byte == 17 %
+unlinkat.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+unlink.o.asm contains: 7 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 22 %
+__unmapself.o.asm contains: 4 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 33 %
+unsetenv.o.asm contains: 66 insts, with 162 bytes
+  Improvement by replacing 32 with 16 Bit inst: 30 Byte == 19 %
+unshare.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+uselocale.o.asm contains: 15 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 35 %
+usleep.o.asm contains: 22 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 27 %
+utimensat.o.asm contains: 50 insts, with 132 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 24 %
+utime.o.asm contains: 25 insts, with 52 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+utimes.o.asm contains: 7 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 12 %
+utmpx.o.asm contains: 22 insts, with 46 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+valloc.o.asm contains: 7 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 22 %
+vasprintf.o.asm contains: 38 insts, with 82 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+vdprintf.o.asm contains: 32 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 9 %
+vdso.o.asm contains: 176 insts, with 454 bytes
+  Improvement by replacing 32 with 16 Bit inst: 102 Byte == 22 %
+ERROR: No instructions in /home/ahc/Desktop/CodeComp/integrator/out/version.o.asm
+versionsort.o.asm contains: 6 insts, with 12 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+vfork.o.asm contains: 6 insts, with 14 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 14 %
+vfprintf.o.asm contains: 2730 insts, with 8016 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2556 Byte == 32 %
+vfscanf.o.asm contains: 835 insts, with 2282 bytes
+  Improvement by replacing 32 with 16 Bit inst: 612 Byte == 27 %
+vfwprintf.o.asm contains: 861 insts, with 2254 bytes
+  Improvement by replacing 32 with 16 Bit inst: 532 Byte == 24 %
+vfwscanf.o.asm contains: 717 insts, with 1970 bytes
+  Improvement by replacing 32 with 16 Bit inst: 536 Byte == 27 %
+vhangup.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+vmlock.o.asm contains: 61 insts, with 186 bytes
+  Improvement by replacing 32 with 16 Bit inst: 64 Byte == 34 %
+vmsplice.o.asm contains: 4 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 20 %
+vprintf.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+vscanf.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+vsnprintf.o.asm contains: 101 insts, with 254 bytes
+  Improvement by replacing 32 with 16 Bit inst: 52 Byte == 20 %
+vsprintf.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+vsscanf.o.asm contains: 74 insts, with 170 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 13 %
+vswprintf.o.asm contains: 123 insts, with 336 bytes
+  Improvement by replacing 32 with 16 Bit inst: 90 Byte == 27 %
+vswscanf.o.asm contains: 80 insts, with 200 bytes
+  Improvement by replacing 32 with 16 Bit inst: 40 Byte == 20 %
+vwprintf.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+vwscanf.o.asm contains: 8 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 20 %
+wait3.o.asm contains: 8 insts, with 16 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wait4.o.asm contains: 50 insts, with 116 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 14 %
+waitid.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+__wait.o.asm contains: 49 insts, with 146 bytes
+  Improvement by replacing 32 with 16 Bit inst: 48 Byte == 33 %
+wait.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+waitpid.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcpcpy.o.asm contains: 18 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcpncpy.o.asm contains: 22 insts, with 44 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcrtomb.o.asm contains: 75 insts, with 234 bytes
+  Improvement by replacing 32 with 16 Bit inst: 84 Byte == 36 %
+wcscasecmp_l.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcscasecmp.o.asm contains: 3 insts, with 6 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcscat.o.asm contains: 19 insts, with 38 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcschr.o.asm contains: 29 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 8 Byte == 12 %
+wcscmp.o.asm contains: 27 insts, with 80 bytes
+  Improvement by replacing 32 with 16 Bit inst: 26 Byte == 32 %
+wcscoll.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcscpy.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+wcscspn.o.asm contains: 45 insts, with 96 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 6 %
+wcsdup.o.asm contains: 25 insts, with 54 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 7 %
+wcsftime.o.asm contains: 184 insts, with 548 bytes
+  Improvement by replacing 32 with 16 Bit inst: 180 Byte == 33 %
+wcslen.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+wcsncasecmp_l.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcsncasecmp.o.asm contains: 51 insts, with 124 bytes
+  Improvement by replacing 32 with 16 Bit inst: 22 Byte == 18 %
+wcsncat.o.asm contains: 31 insts, with 66 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+wcsncmp.o.asm contains: 21 insts, with 58 bytes
+  Improvement by replacing 32 with 16 Bit inst: 16 Byte == 28 %
+wcsncpy.o.asm contains: 26 insts, with 54 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 4 %
+wcsnlen.o.asm contains: 19 insts, with 40 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 5 %
+wcsnrtombs.o.asm contains: 71 insts, with 174 bytes
+  Improvement by replacing 32 with 16 Bit inst: 32 Byte == 18 %
+wcspbrk.o.asm contains: 16 insts, with 34 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+wcsrchr.o.asm contains: 21 insts, with 48 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 12 %
+wcsrtombs.o.asm contains: 110 insts, with 282 bytes
+  Improvement by replacing 32 with 16 Bit inst: 62 Byte == 22 %
+wcsspn.o.asm contains: 29 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 4 Byte == 6 %
+wcsstr.o.asm contains: 216 insts, with 538 bytes
+  Improvement by replacing 32 with 16 Bit inst: 106 Byte == 20 %
+wcstod.o.asm contains: 177 insts, with 404 bytes
+  Improvement by replacing 32 with 16 Bit inst: 50 Byte == 12 %
+wcstok.o.asm contains: 40 insts, with 90 bytes
+  Improvement by replacing 32 with 16 Bit inst: 10 Byte == 11 %
+wcstol.o.asm contains: 143 insts, with 338 bytes
+  Improvement by replacing 32 with 16 Bit inst: 52 Byte == 15 %
+wcstombs.o.asm contains: 10 insts, with 20 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcswcs.o.asm contains: 2 insts, with 4 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wcswidth.o.asm contains: 29 insts, with 60 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 3 %
+wcsxfrm.o.asm contains: 41 insts, with 88 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 7 %
+wctob.o.asm contains: 15 insts, with 44 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 32 %
+wctomb.o.asm contains: 5 insts, with 10 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+wctrans.o.asm contains: 36 insts, with 86 bytes
+  Improvement by replacing 32 with 16 Bit inst: 14 Byte == 16 %
+wcwidth.o.asm contains: 71 insts, with 218 bytes
+  Improvement by replacing 32 with 16 Bit inst: 76 Byte == 35 %
+wmemchr.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+wmemcmp.o.asm contains: 15 insts, with 36 bytes
+  Improvement by replacing 32 with 16 Bit inst: 6 Byte == 17 %
+wmemcpy.o.asm contains: 10 insts, with 22 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 9 %
+wmemmove.o.asm contains: 25 insts, with 62 bytes
+  Improvement by replacing 32 with 16 Bit inst: 12 Byte == 19 %
+wmemset.o.asm contains: 8 insts, with 18 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 11 %
+wordexp.o.asm contains: 392 insts, with 984 bytes
+  Improvement by replacing 32 with 16 Bit inst: 200 Byte == 20 %
+wprintf.o.asm contains: 16 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+write.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+writev.o.asm contains: 15 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 2 Byte == 6 %
+wscanf.o.asm contains: 16 insts, with 32 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+xattr.o.asm contains: 48 insts, with 96 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__xstat.o.asm contains: 35 insts, with 70 bytes
+  Improvement by replacing 32 with 16 Bit inst: 0 Byte == 0 %
+__year_to_secs.o.asm contains: 118 insts, with 334 bytes
+  Improvement by replacing 32 with 16 Bit inst: 98 Byte == 29 %
+Total: 132074  insts, with 353170 bytes
+  Total Improvement by replacing 32 with 16 Bit inst: 89022 Byte == 25 %

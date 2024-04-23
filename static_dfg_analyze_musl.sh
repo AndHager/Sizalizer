@@ -12,7 +12,7 @@ cp ${SCRIPT_ROOT}/res/config.mak.DFG_ANALYSIS ${MUSL_DIR}/config.mak
 # Build musl with pass
 cd "$MUSL_DIR"
 make clean
-make -j11
+make -j1
 make clean
 
 mv ${MUSL_DIR}/config.mak_old ${MUSL_DIR}/config.mak

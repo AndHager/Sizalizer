@@ -14,6 +14,7 @@ embench=false
 
 start_db=false
 purge_db=false
+build_llvm=false
 build_dfg=false
 analyze_dfg=false
 build_target=false
@@ -38,9 +39,10 @@ Available options:
     --embench             set target to Embench (dfault: $embench)
     --start-db            Start the database service (default: $start_db)
     --purge-db            Purge the database (default: $purge_db)
+    --build-llvm          Build LLVM (default: $build_llvm)
     --build-dfg           Build the data flow graph (default: $build_dfg)
     --analyze-dfg         Analyze the data flow graph (default: $analyze_dfg)
-    --build-embench       Build Embench benchmark (default: $build_target)
+    --build-target        Build target (default: $build_target)
     --analyze-binary      Analyze binary files (default: $analyze_binary)
     --run-embench-size    Run Embench benchmark for size (default: $run_embench_size)
     --run-etiss-embench   Run ETISS with Embench benchmark (default: $run_etiss_embench)
@@ -76,6 +78,10 @@ do
     purge_db=true
     shift # Remove --purge-db from processing
     ;;
+    --build-llvm)
+    build_llvm=true
+    shift # Remove --build-llvm from processing
+    ;;
     --build-dfg)
     build_dfg=true
     shift # Remove --build-dfg from processing
@@ -84,7 +90,7 @@ do
     analyze_dfg=true
     shift # Remove --analyze-dfg from processing
     ;;
-    --build-embench)
+    --build-target)
     build_target=true
     shift # Remove --build-embench from processing
     ;;
@@ -118,6 +124,7 @@ done
 if [ "$clean" = true ] ; then
     start_db=true
     purge_db=true
+    build_llvm=true
     build_dfg=true
     analyze_dfg=true
     build_target=true
@@ -134,6 +141,7 @@ if [ "$debug" = true ] ; then
     echo "  clean=$clean"
     echo "  start_db=$start_db"
     echo "  purge_db=$purge_db"
+    echo "  build_llvm=$build_llvm"
     echo "  build_dfg=$build_dfg"
     echo "  analyze_dfg=$analyze_dfg"
     echo "  build_target=$build_target"
@@ -162,6 +170,11 @@ fi
 if [ "$purge_db" = true ] ; then
     echo "INFO: Purge db"
     echo "MATCH (N) DETACH DELETE N;" | mgconsole
+fi
+
+if [ "$purge_db" = true ] ; then
+    echo "INFO: build LLVM"
+    ${SCRIPT_ROOT}../riscv-gnu-toolchain/build.sh &> ${OUT_DIR}/llvm_build.txt
 fi
 
 if [ "$build_dfg" = true ] ; then
@@ -209,7 +222,7 @@ if [ "$analyze_binary" = true ] ; then
         echo "INFO: Disassembling Binaries"
         ${SCRIPT_ROOT}/disassemble_embench_bins.sh
 
-        echo "INFO: Static anaylzing the binaries of Embench-iot"
+        echo "INFO: Static analyzing the binaries of Embench-iot"
         ${SCRIPT_ROOT}/static_analyze_embench.sh
     fi 
 
@@ -217,7 +230,7 @@ if [ "$analyze_binary" = true ] ; then
         echo "INFO: Disassembling Binaries"
         ${SCRIPT_ROOT}/disassemble_musl_bins.sh
 
-        echo "INFO: Static anaylzing the binaries of musl"
+        echo "INFO: Static analyzing the binaries of musl"
         ${SCRIPT_ROOT}/static_analyze_musl.sh
     fi 
 fi
