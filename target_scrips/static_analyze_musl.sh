@@ -29,5 +29,5 @@ OUT_DIR=${SCRIPT_ROOT}/"$1"
 cd "${OUT_DIR}"
 ASM=$(printf  '%s ' *.asm)
 cd "${SCRIPT_ROOT}"
-python3 ${SCRIPT_ROOT}/valyzer/analyze.py --path ${OUT_DIR} ${ASM}
+python3 ${SCRIPT_ROOT}/analysis/static.py --path ${OUT_DIR} ${ASM} &> ${OUT_DIR}/static_out.txt
 

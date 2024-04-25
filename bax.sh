@@ -5,6 +5,7 @@ set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SCRIPT_TARGET=${SCRIPT_ROOT}/target_scrips
+SCRIPT_ANALYSIS=${SCRIPT_ROOT}/target_scrips
 OUT_DIR=${SCRIPT_ROOT}/out
 
 # Set default values
@@ -170,36 +171,36 @@ fi
 if [ "$build_dfg" = true ] ; then
     # build dfg pass
     echo "INFO: Build DFG analysis LLVM-Pass"
-    ${SCRIPT_ROOT}/build_dfg_pass.sh &> ${OUT_DIR}/dfg_pass_build.txt
+    ${SCRIPT_TARGET}/build_dfg_pass.sh &> ${OUT_DIR}/dfg_pass_build.txt
 
     # Static analyze benchmark
     echo "INFO: Building DFG"
     if [ "$embench" = true ] ; then
-        ${SCRIPT_ROOT}/static_dfg_analyze_embench_iot.sh &> ${OUT_DIR}/embench_dfg_pass_run.txt
+        ${SCRIPT_TARGET}/static_dfg_analyze_embench_iot.sh &> ${OUT_DIR}/embench_dfg_pass_run.txt
     fi 
 
     if [ "$musl" = true ] ; then
-        ${SCRIPT_ROOT}/static_dfg_analyze_musl.sh &> ${OUT_DIR}/musl_dfg_pass_run.txt
+        ${SCRIPT_TARGET}/static_dfg_analyze_musl.sh &> ${OUT_DIR}/musl_dfg_pass_run.txt
     fi 
 fi
 
 if [ "$analyze_dfg" = true ] ; then
     echo "INFO: Analyzing DFG"
-    python3 ${SCRIPT_ROOT}/seal/analysis/static/main.py --pdc True &> ${OUT_DIR}/dfg_analysis.txt
+    python3 ${SCRIPT_ANALYSIS}/dfg.py --pdc True &> ${OUT_DIR}/dfg_analysis.txt
 fi
 
 if [ "$build_target" = true ] ; then
     if [ "$embench" = true ] ; then
         echo "INFO: Building embench"
-        ${SCRIPT_ROOT}/compile_embench_iot.sh &> ${OUT_DIR}/embench_build.txt
+        ${SCRIPT_TARGET}/compile_embench_iot.sh &> ${OUT_DIR}/embench_build.txt
 
         echo "INFO: Building embench for ETISS"
-        ${SCRIPT_ROOT}/build_for_etiss.sh  &> ${OUT_DIR}/embench_for_etiss_build.txt
+        ${SCRIPT_TARGET}/build_for_etiss.sh  &> ${OUT_DIR}/embench_for_etiss_build.txt
     fi 
 
     if [ "$musl" = true ] ; then
         echo "INFO: Building musl"
-        ${SCRIPT_ROOT}/compile_musl.sh &> ${OUT_DIR}/musl_build.txt
+        ${SCRIPT_TARGET}/compile_musl.sh &> ${OUT_DIR}/musl_build.txt
 
 
         echo "INFO: Building bench for musl"
@@ -210,18 +211,18 @@ fi
 if [ "$analyze_binary" = true ] ; then
     if [ "$embench" = true ] ; then
         echo "INFO: Disassembling Binaries"
-        ${SCRIPT_ROOT}/disassemble_embench_bins.sh
+        ${SCRIPT_TARGET}/disassemble_embench_bins.sh
 
         echo "INFO: Static analyzing the binaries of Embench-iot"
-        ${SCRIPT_ROOT}/static_analyze_embench.sh
+        ${SCRIPT_TARGET}/static_analyze_embench.sh
     fi 
 
     if [ "$musl" = true ] ; then
         echo "INFO: Disassembling Binaries"
-        ${SCRIPT_ROOT}/disassemble_musl_bins.sh
+        ${SCRIPT_TARGET}/disassemble_musl_bins.sh
 
         echo "INFO: Static analyzing the binaries of musl"
-        ${SCRIPT_ROOT}/static_analyze_musl.sh
+        ${SCRIPT_TARGET}/static_analyze_musl.sh
     fi 
 fi
 
@@ -232,16 +233,16 @@ fi
 
 if [ "$run_etiss_embench" = true ] ; then
     echo "INFO: Generating the dynamic traces for Embench-iot"
-    ${SCRIPT_ROOT}/execute_etiss_embench.sh
+    ${SCRIPT_TARGET}/execute_etiss_embench.sh
 fi
 
 if [ "$analyze_traces" = true ] ; then
     echo "INFO: Analyzing traces"
     cd ${OUT_DIR} 
     TRACES=$(printf  '%s ' *_trace.txt)
-    cd ${SCRIPT_ROOT}
-    # echo "  INFO Executing: python3 ${SCRIPT_ROOT}/seal/analysis/dynamic/main.py --path ${OUT_DIR} ${TRACES}"
-    python3 ${SCRIPT_ROOT}/seal/analysis/dynamic/main.py --path ${OUT_DIR} ${TRACES}
+    cd ${SCRIPT_TARGET}
+    # echo "  INFO Executing: python3 ${SCRIPT_TARGET}/seal/analysis/dynamic/main.py --path ${OUT_DIR} ${TRACES}"
+    python3 ${SCRIPT_ANALYSIS}/dynamic.py --path ${OUT_DIR} ${TRACES}
 fi
 
-cd ${SCRIPT_ROOT}
+cd ${SCRIPT_TARGET}
