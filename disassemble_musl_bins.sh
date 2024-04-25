@@ -16,7 +16,7 @@ ${TOOL_PATH}/llvm-ar x libc.a
 for file in *.o;
 do 
     #echo "  INFO Executing: ${TOOL_PATH}/llvm-objdump -d ${SCRIPT_ROOT}/embench-iot/bd/install/bin/${file} &> ${SCRIPT_ROOT}/out/${file}.rv32"
-    ${TOOL_PATH}/llvm-objdump -d ${file} 1> ${SCRIPT_ROOT}/out/${file}.asm
+    ${TOOL_PATH}/llvm-objdump -M no-aliases -d ${file} 1> ${SCRIPT_ROOT}/out/${file}.asm
 done
 
 # ${TOOL_PATH}/llvm-objdump -d libc.a 1> ${SCRIPT_ROOT}/out/libc.a.asm

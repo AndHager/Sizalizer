@@ -18,7 +18,7 @@ python3 ./build_all.py \
             --chip=generic \
             --board=ri5cyverilator \
             --cc=clang \
-            --cflags="-fno-builtin-bcmp -Oz -fpass-plugin=/home/ahc/Desktop/CodeComp/integrator/seal/llvm-pass-plugin/build/libLLVMCDFG.so" \
+            --cflags="-fno-builtin-bcmp -Oz -fpass-plugin=./seal/llvm-pass-plugin/build/libLLVMCDFG.so" \
             --ldflags="-nostartfiles -nostdlib" \
             --dummy-libs="crt0 libc libgcc libm"
 
