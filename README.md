@@ -1,4 +1,4 @@
-# Integrator
+# Sizalyzer
 
 Integrates the static and the dynamic analysis in one Execution flow.
 
@@ -15,6 +15,8 @@ It is tested on Ubuntu 22.04
 - g++ 
 - docker
 - binwalk
+- readelf
+- objdump
 - time (explicitly installed not the bash func)
 - python3
 - pip3
@@ -26,6 +28,7 @@ It is tested on Ubuntu 22.04
 - numpy
 - matplotlib
 - neo4j
+- enum
 
 ### Manually install
 
@@ -61,4 +64,11 @@ Available options:
     --run-etiss-embench   Run ETISS with Embench benchmark (default: false)
     --analyze-traces      Enable trace analysis (default: true)
     --help                Display this help and exit
+```
+## Binary Analysis
+
+You may want to use the binary analysis script separately:
+
+```
+python3 analyze.py --path /path/to/asm/files [bin*]
 ```

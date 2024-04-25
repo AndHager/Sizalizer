@@ -1,5 +1,4 @@
-out/
-out_hard_float/
-out_soft_float/
+**build/
+out*/
 .vscode/
 .devcontainer/
