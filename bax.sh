@@ -4,6 +4,7 @@
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_TARGET=${SCRIPT_ROOT}/target_scrips
 OUT_DIR=${SCRIPT_ROOT}/out
 
 # Set default values
@@ -14,7 +15,6 @@ embench=false
 
 start_db=false
 purge_db=false
-build_llvm=false
 build_dfg=false
 analyze_dfg=false
 build_target=false
@@ -39,7 +39,6 @@ Available options:
     --embench             set target to Embench (dfault: $embench)
     --start-db            Start the database service (default: $start_db)
     --purge-db            Purge the database (default: $purge_db)
-    --build-llvm          Build LLVM (default: $build_llvm)
     --build-dfg           Build the data flow graph (default: $build_dfg)
     --analyze-dfg         Analyze the data flow graph (default: $analyze_dfg)
     --build-target        Build target (default: $build_target)
@@ -77,10 +76,6 @@ do
     --purge-db)
     purge_db=true
     shift # Remove --purge-db from processing
-    ;;
-    --build-llvm)
-    build_llvm=true
-    shift # Remove --build-llvm from processing
     ;;
     --build-dfg)
     build_dfg=true
@@ -158,7 +153,7 @@ fi
 
 if [ "$clean" = true ] ; then
     echo "INFO: Cleaning old out"
-    rm -r ${SCRIPT_ROOT}/out
+    rm -r ${OUT_DIR}
     mkdir out
 fi
 
@@ -170,11 +165,6 @@ fi
 if [ "$purge_db" = true ] ; then
     echo "INFO: Purge db"
     echo "MATCH (N) DETACH DELETE N;" | mgconsole
-fi
-
-if [ "$purge_db" = true ] ; then
-    echo "INFO: build LLVM"
-    ${SCRIPT_ROOT}../riscv-gnu-toolchain/build.sh &> ${OUT_DIR}/llvm_build.txt
 fi
 
 if [ "$build_dfg" = true ] ; then

@@ -275,8 +275,6 @@ def plot_bars(stats, filename, path, mode=Mode.ALL, search_key=SearchKey.MNEMONI
     plt.close()
 
     
-
-
 def get_byte_count(instructions):
     result = 0
     for inst in instructions:
