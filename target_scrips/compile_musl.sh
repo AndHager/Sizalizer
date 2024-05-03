@@ -4,9 +4,9 @@
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-MUSL_DIR="${SCRIPT_ROOT}/../musl-1.2.5"
+MUSL_DIR="${SCRIPT_ROOT}/../../musl-1.2.5"
 
-cp ${SCRIPT_ROOT}/res/config.mak.RISCV_BUILD ${MUSL_DIR}/config.mak
+cp ${SCRIPT_ROOT}/../res/config.mak.RISCV_BUILD ${MUSL_DIR}/config.mak
 
 # Build musl with pass
 cd "$MUSL_DIR"

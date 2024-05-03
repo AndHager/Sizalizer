@@ -1,4 +1,9 @@
 **build/
+**__pycache__/
+example/primes
+example/primes.asm
+example/hello
+example/hello.asm
 out*/
 .vscode/
 .devcontainer/

@@ -3,8 +3,10 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import string
-from enum import Enum
 import tikzplotlib
+
+
+from helper import instruction_model, parse_utils, evaluator, modes, plotter
 
 plt.rcParams.update({
     "text.usetex": True,
@@ -13,69 +15,11 @@ plt.rcParams.update({
 })
 
 debug = False
-
-no_dest = [
-    'sd', 'sw', 'sh', 'sb',
-    'fsd', 'fsd'
-    'c.sd', 'c.sw', 
-    'c.fsw', 'c.fsd'
-]
-
-class Instruction:
-    address = ''
-    opcode = ''
-    mnemonic = ''
-    regs = []
-
-    def __init__(self, address, opcode, mnemonic):
-        if len(opcode) % 2 != 0:
-            print(address, '', opcode, ' ', mnemonic)
-            assert False
-        self.address = address
-        self.opcode = opcode
-        self.mnemonic = mnemonic
-        self.regs = []
-
-    def __str__(self):
-        result = str(self.address) + '\t' + str(self.opcode) + (12 - len(str(self.opcode))) * ' ' + str(self.mnemonic) + ' ' 
-        param_size = len(self.regs)
-        for i in range(param_size):
-            result += self.regs[i]
-            if i != param_size - 1:
-                result += ', '
-        return result
-    
-    def get_size(self):
-        assert len(self.opcode) % 2 == 0
-        return int(len(self.opcode)/2)
-    
-    def get_params(self):
-        if self.mnemonic in no_dest:
-            return self.regs
-        return self.regs[1:]
-
-    def get_dest(self):
-        if self.mnemonic in no_dest or len(self.regs) < 1:
-            return 'no_dest'
-        return self.regs[0]
-
-
-class Mode(Enum):
-    ALL = 'all'          # All instructions
-    COMPRESSED = '16Bit' # Only 16 Bit instructions
-    FULL = '32Bit'       # Only 32 Bit instructions
-
-
-class SearchKey(Enum):
-    MNEMONIC = 'mnemonic'
-    OPCODE = 'opcode'
-    REGISTER = 'register'
-    CHAIN = 'chain'
-    PAIR = 'pair'
+plot_all = False
 
 
 def parse_line(source_line):
-    if source_line[0:1] == ' ':
+    if source_line[0:1] == ' ' or source_line[0:1] == '1':
         source_line = source_line.strip()
         sl = source_line.replace('\t', ' ')
         while sl != source_line:
@@ -102,7 +46,7 @@ def parse_line(source_line):
                 mnemonic = elems[i]
                 i += 1
 
-                instruction = Instruction(address, opcode, mnemonic)
+                instruction = instruction_model.Instruction(address, opcode, mnemonic)
 
                 if elen > i:
                     first_param = elems[i]
@@ -132,57 +76,32 @@ def parse_line(source_line):
 
                 return instruction
             else:
-                print('ERROR: false assumed inst: ', source_line)
+                if debug:
+                    print('ERROR: false assumed inst: ', source_line)
     else:
         if debug:
             print('INFO: not an inst: ', source_line)
     return None
 
 
-def parse_file(fqfn):
-    instructions = []
-    with open(fqfn, 'r', errors='replace') as file:
-            lines = file.read().split('\n')
-            if debug:
-                print('Line count: ', len(lines))
-            
-            instructions = []
-            for source_line in lines:
-                inst = parse_line(source_line)
-                if inst != None:
-                    instructions.append(inst)
-    if debug:     
-        for inst in instructions[1:20]:
-            print(str(inst))
-    return instructions    
-
-
-def sort_dict(result, threshold):
-    vals = [
-        val 
-        for val in result.items()
-    ]
-    return sorted(vals, key=lambda x:x[1], reverse=True)[:threshold]
-
-
-def most_inst(instructions, mode=Mode.ALL, search_key=SearchKey.MNEMONIC, threshold=1): 
+def most_inst(instructions, mode=modes.Mode.ALL, search_key=modes.SearchKey.MNEMONIC, threshold=1): 
     result = {}
     for inst in instructions:
-        is_comp = inst.get_size() == 2 and mode == Mode.COMPRESSED
-        is_full = inst.get_size() == 4 and mode == Mode.FULL
-        use_all = mode == Mode.ALL
+        is_comp = inst.get_size() == 2 and mode == modes.Mode.COMPRESSED
+        is_full = inst.get_size() == 4 and mode == modes.Mode.FULL
+        use_all = mode == modes.Mode.ALL
         if use_all or is_comp or is_full:
             keys = [inst.mnemonic]
-            if search_key == SearchKey.OPCODE:
+            if search_key == modes.SearchKey.OPCODE:
                 keys = [inst.opcode]
-            if search_key == SearchKey.REGISTER:
+            if search_key == modes.SearchKey.REGISTER:
                 keys = inst.regs
             for key in keys:
                 if key in result:
                     result[key] += 1
                 else:
                     result[key] = 1
-    return sort_dict(result, threshold)
+    return evaluator.sort_dict(result, threshold)
 
 
 def longest_chains(instructions, threshold=2):
@@ -202,7 +121,7 @@ def longest_chains(instructions, threshold=2):
                     result[last_key] = chain_len
             chain_len = 1
         last_key = key
-    return sort_dict(result, threshold)
+    return evaluator.sort_dict(result, threshold)
     
 
 def most_pairs(instructions, threshold=5, equal=True, connected=False):
@@ -222,7 +141,7 @@ def most_pairs(instructions, threshold=5, equal=True, connected=False):
             else:
                 result[key] = 1
         old_inst = inst
-    return sort_dict(result, threshold)
+    return evaluator.sort_dict(result, threshold)
 
 
 def get_improvement(stats, imp_map):
@@ -232,7 +151,7 @@ def get_improvement(stats, imp_map):
     return imp
 
 
-def plot_bars(stats, filename, path, mode=Mode.ALL, search_key=SearchKey.MNEMONIC):
+def plot_bars(stats, filename, path, mode=modes.Mode.ALL, search_key=modes.SearchKey.MNEMONIC):
     # set width of bars
     # usetex for latex plots
     name = filename.split('.')[0]
@@ -293,27 +212,28 @@ def main(args):
 
         instructions = []
         fqpn = '{}/{}'.format(str(path), str(file))
-        instructions = parse_file(fqpn)
+        instructions = parse_utils.parse_file(fqpn, parse_line, debug)
         if len(instructions) > 0:
             total += instructions
             total_byte_count = get_byte_count(instructions)
             inst_count = len(instructions)
             print(file, 'contains:', inst_count, 'insts, with', total_byte_count, 'bytes')
-            for mode in Mode:
-                stats = most_inst(instructions, mode, SearchKey.MNEMONIC, 10)
-                plot_bars(stats, str(file), path, mode)
-
-            stats = most_inst(instructions, Mode.ALL, SearchKey.OPCODE, 10)
-            plot_bars(stats, str(file), path, Mode.ALL, SearchKey.OPCODE)
-
-            stats = most_inst(instructions, Mode.ALL, SearchKey.REGISTER, 10)
-            plot_bars(stats, str(file), path, Mode.ALL, SearchKey.REGISTER)
             
-            chains = longest_chains(instructions, 10)
-            plot_bars(chains, str(file), path, Mode.ALL, SearchKey.CHAIN)
+            if plot_all:
+                for mode in modes.Mode:
+                    stats = most_inst(instructions, mode, modes.SearchKey.MNEMONIC, 10)
+                    plot_bars(stats, str(file), path, mode)
+                stats = most_inst(instructions, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
+                plot_bars(stats, str(file), path, modes.Mode.ALL, modes.SearchKey.OPCODE)
+
+                stats = most_inst(instructions, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
+                plot_bars(stats, str(file), path, modes.Mode.ALL, modes.SearchKey.REGISTER)
+            
+                chains = longest_chains(instructions, 10)
+                plot_bars(chains, str(file), path, modes.Mode.ALL, modes.SearchKey.CHAIN)
 
 
-            stats = most_inst(instructions, Mode.FULL, SearchKey.MNEMONIC, 10000000)
+            stats = most_inst(instructions, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 10000000)
             # x contains count of 32 Bit (4 Byte) instructions
             # x*2 is the count of Bytes saved by a reduction to 16 bit inst
             improvement = get_improvement(stats, lambda x: x*2)
@@ -331,7 +251,8 @@ def main(args):
                 print()
 
             pairs = most_pairs(instructions, 10, equal=False, connected=True)
-            plot_bars(pairs, str(file), path, Mode.ALL, SearchKey.PAIR)
+            if plot_all:
+                plot_bars(pairs, str(file), path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
 
 
@@ -346,21 +267,21 @@ def main(args):
         total_inst_count = len(total)
         total_byte_count = get_byte_count(total)
         print('Total:', total_inst_count, ' insts, with', total_byte_count, 'bytes')
-        for mode in Mode:
-            stats = most_inst(total, mode, SearchKey.MNEMONIC, 10)
+        for mode in modes.Mode:
+            stats = most_inst(total, mode, modes.SearchKey.MNEMONIC, 10)
             plot_bars(stats, '_Total', path, mode)
 
-        stats = most_inst(total, Mode.ALL, SearchKey.OPCODE, 10)
-        plot_bars(stats, '_Total', path, Mode.ALL, SearchKey.OPCODE)
+        stats = most_inst(total, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
+        plot_bars(stats, '_Total', path, modes.Mode.ALL, modes.SearchKey.OPCODE)
 
-        stats = most_inst(total, Mode.ALL, SearchKey.REGISTER, 10)
-        plot_bars(stats, '_Total', path, Mode.ALL, SearchKey.REGISTER)
+        stats = most_inst(total, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
+        plot_bars(stats, '_Total', path, modes.Mode.ALL, modes.SearchKey.REGISTER)
         
         chains = longest_chains(total, 10)
-        plot_bars(chains, '_Total', path, Mode.ALL, SearchKey.CHAIN)
+        plot_bars(chains, '_Total', path, modes.Mode.ALL, modes.SearchKey.CHAIN)
 
 
-        stats = most_inst(total, Mode.FULL, SearchKey.MNEMONIC, 100000)
+        stats = most_inst(total, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 100000)
         # x contains count of 32 Bit (4 Byte) instructions
         # x*2 is the count of Bytes saved by a reduction to 16 bit inst
         improvement = get_improvement(stats, lambda x: x*2)
@@ -378,7 +299,7 @@ def main(args):
             print()
 
         pairs = most_pairs(total, 10, equal=False, connected=True)
-        plot_bars(pairs, '_Total', path, Mode.ALL, SearchKey.PAIR)
+        plot_bars(pairs, '_Total', path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
         pairs = most_pairs(instructions, 1, equal=False, connected=True)
         # x contains count of 16 or 32 Bit instructions pairs

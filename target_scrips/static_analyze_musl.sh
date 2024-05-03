@@ -5,7 +5,7 @@ set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 TOOL_PATH=~/riscv/bin
-OUT_DIR=${SCRIPT_ROOT}/"$1"
+OUT_DIR=${SCRIPT_ROOT}/../"$1"
 
 # cd ${SCRIPT_ROOT}/../musl-1.2.5/lib/
 # 
@@ -29,5 +29,5 @@ OUT_DIR=${SCRIPT_ROOT}/"$1"
 cd "${OUT_DIR}"
 ASM=$(printf  '%s ' *.asm)
 cd "${SCRIPT_ROOT}"
-python3 ${SCRIPT_ROOT}/analysis/static.py --path ${OUT_DIR} ${ASM} &> ${OUT_DIR}/static_out.txt
+python3 ${SCRIPT_ROOT}/../analysis/static.py --path ${OUT_DIR} ${ASM} &> ${OUT_DIR}/static_out.txt
 

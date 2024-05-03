@@ -4,14 +4,14 @@
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-INTEGRATOR_PATH="${SCRIPT_ROOT}"
+INTEGRATOR_PATH="${SCRIPT_ROOT}"/..
 EMBENCH_PATH="${INTEGRATOR_PATH}/embench-iot"
 BUILD_PATH="${EMBENCH_PATH}/bd/build"
 SUPPORT_PATH="${EMBENCH_PATH}/support"
 BD_SUPPORT_PATH="${EMBENCH_PATH}/bd/support"
 
-CC="/opt/riscv/bin/riscv32-unknown-elf-clang"
-CFLAGS="-D__riscv__ -march=rv32gc -mabi=ilp32d -fno-builtin-bcmp -Oz -I${SUPPORT_PATH} -I${EMBENCH_PATH}/config/riscv32/boards/ri5cyverilator -I${EMBENCH_PATH}/config/riscv32/chips/generic -I${EMBENCH_PATH}/config/riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1"
+CC="/home/ahc/riscv/bin/clang"
+CFLAGS="-D__riscv__ -Oz -march=rv32imac_zcmp -mabi=ilp32 -fno-builtin-bcmp -I${SUPPORT_PATH} -I${EMBENCH_PATH}/config/riscv32/boards/ri5cyverilator -I${EMBENCH_PATH}/config/riscv32/chips/generic -I${EMBENCH_PATH}/config/riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1"
 
 if [[ "${1:-NONE}" == "clean" ]]; then
     rm -rf ${BUILD_PATH}

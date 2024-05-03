@@ -153,9 +153,9 @@ fi
 
 
 if [ "$clean" = true ] ; then
-    echo "INFO: Cleaning old out"
+    echo "INFO: Cleaning old $OUT_DIR"
     rm -r ${OUT_DIR}
-    mkdir out
+    mkdir ${OUT_DIR}
 fi
 
 if [ "$purge_db" = true ] ; then
@@ -214,7 +214,7 @@ if [ "$analyze_binary" = true ] ; then
         ${SCRIPT_TARGET}/disassemble_embench_bins.sh
 
         echo "INFO: Static analyzing the binaries of Embench-iot"
-        ${SCRIPT_TARGET}/static_analyze_embench.sh
+        ${SCRIPT_TARGET}/static_analyze_embench.sh out
     fi 
 
     if [ "$musl" = true ] ; then
@@ -222,7 +222,7 @@ if [ "$analyze_binary" = true ] ; then
         ${SCRIPT_TARGET}/disassemble_musl_bins.sh
 
         echo "INFO: Static analyzing the binaries of musl"
-        ${SCRIPT_TARGET}/static_analyze_musl.sh
+        ${SCRIPT_TARGET}/static_analyze_musl.sh out
     fi 
 fi
 
