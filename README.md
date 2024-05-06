@@ -65,10 +65,58 @@ Available options:
     --analyze-traces      Enable trace analysis (default: true)
     --help                Display this help and exit
 ```
-## Binary Analysis
+
+
+### DFG Analysis
+
+The DFG analysis can be conducted separately:
+
+```
+usage: analysis/dfg.py [-h] [--host [HOST]] [--port [PORT]] [--pdc [PDC]] [--clear-db [CLEAR_DB]]
+
+Analyze the File.
+
+options:
+  -h, --help            show this help message and exit
+  --host [HOST]         host of the memgraph (or Neo4j) DB (reachable over bolt)
+  --port [PORT]         port of the Memgraph DB
+  --pdc [PDC]           Plot Duplicated Chains
+  --clear-db [CLEAR_DB] Clear the Database
+```
+
+
+### Binary Analysis
 
 You may want to use the binary analysis script separately:
 
 ```
-python3 analyze.py --path /path/to/asm/files [bin*]
+usage: analysis/static.py [-h] [--path PATH] F [F ...]
+
+Count the instructions in an assembly file.
+
+positional arguments:
+  F            files to analyze
+
+options:
+  -h, --help   show this help message and exit
+  --path PATH  base path for the files
 ```
+
+
+### Trace Analysis
+
+The DFG analysis can be conducted separately:
+
+```
+usage: analysis/dynamic.py [-h] [--path PATH] F [F ...]
+
+Count the instructions in an trace file.
+
+positional arguments:
+  F            files to analyze
+
+options:
+  -h, --help   show this help message and exit
+  --path PATH  base path for the files
+```
+
