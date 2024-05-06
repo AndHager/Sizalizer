@@ -71,7 +71,7 @@ def plot_bars(stats, name):
     for index, label in enumerate(plt.gca().xaxis.get_ticklabels()):
         y_position = label.get_position()[1]  # Get current y position
         if index % 2 != 0:  # For odd indices
-            label.set_y(y_position - 0.06)  # Move down by a fraction; adjust as needed
+            label.set_y(y_position - 0.12)  # Move down by a fraction; adjust as needed
 
     plt.legend().remove()
     plt.tight_layout()

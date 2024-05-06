@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tikzplotlib
 
-from helper import instruction_model, parse_utils, evaluator, modes, plotter
+from lib import instruction_model, parse_utils, evaluator, modes, plotter
 
 plt.rcParams["font.family"] = "cmb10"
 
@@ -12,7 +12,38 @@ debug = False
 
 
 def parse_line(source_line):
-    # use WordEnd to avoid parsing leading a-f of non-hex numbers as a hex
+    """
+    Parses a trace code line into an instruction object.
+
+    This function is designed to parse a single trace code line provided as 
+    a string in the trace format of ETISS.
+    It expects the source line to contain an address, a mnemonic, and an opcode, and params 
+    each separated by spaces. Each component is then extracted and used to construct
+    an `Instruction` object from the `instruction_model` module.
+    Additionally, the function parses up to three parameters that follow the opcode.
+    Each parameter is assumed to be separated by spaces and optionally enclosed in 
+    brackets, which are stripped if present.
+    <address>: <mnemonic> # <opcode> [<param>=<value> | *]
+
+    For Example:
+    0x0000000010000c02: addi # 10000010100000011000011000010011 [rd=12 | rs1=3 | imm=2088]
+    0x0000000010000c06: csub # 1000111000001001 [rs2=2 | rd=4]
+    0x0000000010000c08: cjal # 0010010000000101 [imm=544].
+
+    Parameters:
+    - source_line (str): A string representing a single line of trace code.
+
+    Returns:
+    - `Instruction`: An Instruction object populated with the parsed data, or
+      `None` if the source line does not start with '0x' or fails to parse.
+
+    Note:
+    - The function contains an undeclared variable `debug`. If `debug` is `True`, 
+      it prints all source lines a message when the source line does not start with '0x' but does 
+      not raise a `NameError`.
+    - The global `instruction_model` with an `Instruction` class should be available
+      in the context where this function is executed.
+    """
     if source_line[0:2] == '0x':
 
         elems = source_line.split(' ')
@@ -39,13 +70,27 @@ def parse_line(source_line):
             third_param = elems[8][:-1]
             instruction.regs.append(third_param)
         
-        # print(str(instruction))
+        if debug:
+            print(str(instruction))
         return instruction
     if debug:
         print('No Inst:', source_line)
     return None
 
 def main(args):
+    """
+    The main entry point for the script that processes and analyzes files.
+
+    This function takes command-line arguments, extracts instructions from each provided file,
+    performs the evaluation, generates plots, and prints dynamic code size toghether with the improvement oportunity.
+
+    Parameters:
+    args (argparse.Namespace): command-line arguments.
+                                It must have at least the following attributes:
+                                - path: The base path where the traces are located.
+                                - files: An iterable with the names of the traces to be processed.
+
+    """
     path = Path(args.path).absolute()
     tp = 'Dynamic'
     total = []

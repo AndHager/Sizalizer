@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tikzplotlib
 
-from helper import modes
+from lib import modes
 
 plt.rcParams.update({
     "text.usetex": True,

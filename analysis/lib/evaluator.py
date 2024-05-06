@@ -1,4 +1,4 @@
-from helper import modes
+from lib import modes
 
 def sort_dict(result, threshold):
     vals = [

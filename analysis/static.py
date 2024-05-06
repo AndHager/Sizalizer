@@ -2,12 +2,45 @@ import argparse
 from pathlib import Path
 import string
 
-from helper import instruction_model, parse_utils, evaluator, modes, plotter
+from lib import instruction_model, parse_utils, evaluator, modes, plotter
 
+# Debug logs (very verbose)
 debug = False
+# Define if each asm file should be evaluated speratly or in total
 plot_all = False
 
 def parse_line(source_line):
+    """
+    Parses a line of assembly code into an instruction object.
+
+    This function is designed to parse a single line of assembly code provided as 
+    a string in the intel format of llvm-objdump.
+    It expects the source line to contain an address, a mnemonic, and an opcode, and params 
+    each separated by spaces. Each component is then extracted and used to construct
+    an `Instruction` object from the `instruction_model` module.
+    Additionally, the function parses up to three parameters.
+    <address> <opcode> <mnemonic> <params>, ...
+
+    For Example:
+    00000094 <.LBB0_11>:
+          94: 08 40        	c.lw	a0, 0x0(s0)
+          96: 13 65 05 08  	ori	    a0, a0, 0x80
+          9a: 08 c0        	c.sw	a0, 0x0(s0)
+
+    Parameters:
+    - source_line (str): A string representing a single line of assembly code.
+
+    Returns:
+    - `Instruction`: An Instruction object populated with the parsed data, or
+      `None` if the source line does not start with '0x' or fails to parse.
+
+    Note:
+    - The function contains an undeclared variable `debug`. If `debug` is `True`, 
+      it prints all source lines a message when the source line does not start with '0x' but does 
+      not raise a `NameError`.
+    - The global `instruction_model` with an `Instruction` class should be available
+      in the context where this function is executed.
+    """
     if source_line[0:1] == ' ' or source_line[0:1] == '1':
         source_line = source_line.strip()
         sl = source_line.replace('\t', ' ')
@@ -74,6 +107,19 @@ def parse_line(source_line):
 
 
 def main(args):
+    """
+    The main entry point for the script that processes and analyzes files.
+
+    This function takes command-line arguments, extracts instructions from each provided file,
+    performs the evaluation, generates plots, and prints static code size toghether with the improvement oportunity.
+
+    Parameters:
+    args (argparse.Namespace): command-line arguments.
+                                It must have at least the following attributes:
+                                - path: The base path where the asm files are located.
+                                - files: An iterable with the names of the asm to be processed.
+
+    """
     path = str(Path(args.path).absolute())
     tp = 'Static'
     total = []
