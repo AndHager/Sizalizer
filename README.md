@@ -2,9 +2,11 @@
 
 Sizalizer is an innovative analysis framework designed to advance the development of embedded C/C++ applications alongside RISC-V instruction set extensions. 
 
+
 ## Prerequisites
 
 It is tested on Ubuntu 22.04
+
 
 ### Tools
 
@@ -21,6 +23,7 @@ It is tested on Ubuntu 22.04
 - python3
 - pip3
 
+
 ### Python libs
 
 - pathlib
@@ -29,6 +32,7 @@ It is tested on Ubuntu 22.04
 - matplotlib
 - neo4j
 - enum
+
 
 ### Manually install
 
@@ -40,7 +44,9 @@ Graph DB and tools:
 
 Coss Compiler X86 -> RV32
 
-- LLVM (https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2024.03.01/riscv32-elf-ubuntu-22.04-llvm-nightly-2024.03.01-nightly.tar.gz)
+- Prebuild RISC-V toolchain (https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2024.03.01/riscv32-elf-ubuntu-22.04-llvm-nightly-2024.03.01-nightly.tar.gz)
+- Manually build clang version 18.1.3: (https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.3)
+
 
 ## Usage
 
