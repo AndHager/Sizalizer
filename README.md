@@ -1,6 +1,6 @@
-# Sizalyzer
+# Sizalizer: A Multi-layer Analysis Framework for ISA Optimization
 
-Integrates the static and the dynamic analysis in one Execution flow.
+Sizalizer is an innovative analysis framework designed to advance the development of embedded C/C++ applications alongside RISC-V instruction set extensions. 
 
 ## Prerequisites
 
