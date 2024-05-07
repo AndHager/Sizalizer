@@ -4,7 +4,7 @@ class Mode(Enum):
     ALL = 'all'          # All instructions
     COMPRESSED = '16Bit' # Only 16 Bit instructions
     FULL = '32Bit'       # Only 32 Bit instructions
-
+    
 
 class SearchKey(Enum):
     MNEMONIC = 'mnemonic'

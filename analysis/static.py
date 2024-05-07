@@ -211,18 +211,22 @@ def main(args):
         chains = evaluator.chain_distrib(total, 10)
         plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN_DISTRIB)
 
-
         lw16_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
         sw16_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
         
         lw32_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
         sw32_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
         
+        lw48_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=6, base_regs='all', dest_regs='all')
+        sw48_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=6, base_regs='all', dest_regs='all')
+
         imp = [
             ('c.lwm', lw16_imp),
             ('c.swm', sw16_imp),
             ('lwm', lw32_imp),
-            ('swm', sw32_imp)
+            ('swm', sw32_imp),
+            ('e.lwm', lw48_imp),
+            ('e.swm', sw48_imp),
         ]
         plotter.plot_bars(imp, '_Total_LSWM_IMP', tp, path, modes.Mode.ALL, modes.SearchKey.MNEMONIC)
 
