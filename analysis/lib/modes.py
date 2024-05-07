@@ -11,5 +11,6 @@ class SearchKey(Enum):
     OPCODE = 'opcode'
     REGISTER = 'register'
     CHAIN = 'chain'
+    CHAIN_DISTRIB = 'chain_distribution'
     PAIR = 'pair'
     IMM = 'imm'

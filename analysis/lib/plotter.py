@@ -10,7 +10,7 @@ plt.rcParams.update({
     "font.sans-serif": "Helvetica",
 })
 
-def plot_bars(stats, filename, tp, path, mode=modes.Mode.ALL, search_key=modes.SearchKey.MNEMONIC):
+def plot_bars(stats, filename, tp, path, mode, search_key):
     # set width of bars
     # usetex for latex plots
     name = filename.split('.')[0]
@@ -47,7 +47,7 @@ def plot_bars(stats, filename, tp, path, mode=modes.Mode.ALL, search_key=modes.S
     plt.tight_layout()
     # plt.legend().remove()
 
-    fig_name = path + '/' + name + '_', tp, '_' + search_key.value + '_' + mode.value
-    plt.savefig(fig_name + '.pdf')
+    fig_name = str(path) + '/' + str(name) + '_' + str(tp) + '_' + search_key.value + '_' + mode.value
+    plt.savefig(str(fig_name) + '.pdf')
     # tikzplotlib.save(fig_name + '.tex')
     plt.close()

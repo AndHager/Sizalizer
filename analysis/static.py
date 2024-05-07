@@ -10,7 +10,7 @@ debug = False
 plot_all = False
 
 def parse_line(source_line):
-    """
+    '''
     Parses a line of assembly code into an instruction object.
 
     This function is designed to parse a single line of assembly code provided as 
@@ -40,7 +40,7 @@ def parse_line(source_line):
       not raise a `NameError`.
     - The global `instruction_model` with an `Instruction` class should be available
       in the context where this function is executed.
-    """
+    '''
     if source_line[0:1] == ' ' or source_line[0:1] == '1':
         source_line = source_line.strip()
         sl = source_line.replace('\t', ' ')
@@ -87,7 +87,16 @@ def parse_line(source_line):
                     i += 1
                     if second_param[-1] == ',':
                         second_param = second_param[:(len(second_param)-1)]
-                    instruction.regs.append(second_param)
+                    if second_param[-1] == ')':
+                        base_offset = second_param.split('(')
+                        assert len(base_offset) == 2
+                        base = base_offset[1]
+                        second_param = base[:(len(base)-1)]
+                        third_param = base_offset[0]
+                        instruction.regs.append(second_param)
+                        instruction.regs.append(third_param)
+                    else:
+                        instruction.regs.append(second_param)
 
                 if elen > i:
                     third_param = elems[i]
@@ -107,7 +116,7 @@ def parse_line(source_line):
 
 
 def main(args):
-    """
+    '''
     The main entry point for the script that processes and analyzes files.
 
     This function takes command-line arguments, extracts instructions from each provided file,
@@ -119,7 +128,7 @@ def main(args):
                                 - path: The base path where the asm files are located.
                                 - files: An iterable with the names of the asm to be processed.
 
-    """
+    '''
     path = str(Path(args.path).absolute())
     tp = 'Static'
     total = []
@@ -141,15 +150,15 @@ def main(args):
             if plot_all:
                 for mode in modes.Mode:
                     stats = evaluator.most_inst(instructions, mode, modes.SearchKey.MNEMONIC, 10)
-                    plotter.plot_bars(stats, str(file), path, tp, mode)
+                    plotter.plot_bars(stats, str(file), tp, path, mode)
                 stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
-                plotter.plot_bars(stats, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.OPCODE)
+                plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
 
                 stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
-                plotter.plot_bars(stats, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.REGISTER)
+                plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
             
                 chains = evaluator.longest_chains(instructions, 10)
-                plotter.plot_bars(chains, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.CHAIN)
+                plotter.plot_bars(chains, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
 
 
             stats = evaluator.most_inst(instructions, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 10000000)
@@ -171,7 +180,7 @@ def main(args):
 
             pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
             if plot_all:
-                plotter.plot_bars(pairs, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.PAIR)
+                plotter.plot_bars(pairs, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
 
 
@@ -188,17 +197,34 @@ def main(args):
         print('Total:', total_inst_count, ' insts, with', total_byte_count, 'bytes')
         for mode in modes.Mode:
             stats = evaluator.most_inst(total, mode, modes.SearchKey.MNEMONIC, 10)
-            plotter.plot_bars(stats, '_Total', path, tp, mode)
+            plotter.plot_bars(stats, '_Total', tp, path, mode, modes.SearchKey.MNEMONIC)
 
         stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
-        plotter.plot_bars(stats, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.OPCODE)
+        plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
 
         stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
-        plotter.plot_bars(stats, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.REGISTER)
+        plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
         
         chains = evaluator.longest_chains(total, 10)
-        plotter.plot_bars(chains, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.CHAIN)
+        plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
 
+        chains = evaluator.chain_distrib(total, 10)
+        plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN_DISTRIB)
+
+
+        lw16_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
+        sw16_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
+        
+        lw32_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
+        sw32_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
+        
+        imp = [
+            ('c.lwm', lw16_imp),
+            ('c.swm', sw16_imp),
+            ('lwm', lw32_imp),
+            ('swm', sw32_imp)
+        ]
+        plotter.plot_bars(imp, '_Total_LSWM_IMP', tp, path, modes.Mode.ALL, modes.SearchKey.MNEMONIC)
 
         stats = evaluator.most_inst(total, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 100000)
         # x contains count of 32 Bit (4 Byte) instructions
@@ -218,7 +244,7 @@ def main(args):
             print()
 
         pairs = evaluator.most_pairs(total, 10, equal=False, connected=True)
-        plotter.plot_bars(pairs, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.PAIR)
+        plotter.plot_bars(pairs, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
         pairs = evaluator.most_pairs(instructions, 1, equal=False, connected=True)
         # x contains count of 16 or 32 Bit instructions pairs

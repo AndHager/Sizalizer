@@ -1,9 +1,11 @@
 no_dest = [
     'sd', 'sw', 'sh', 'sb',
     'fsd', 'fsd'
-    'c.sd', 'c.sw', 
+    'c.sd', 'c.sw', 'c.swsp'
     'c.fsw', 'c.fsd'
 ]
+
+
 
 class Instruction:
     address = ''
@@ -32,6 +34,13 @@ class Instruction:
                 result += ', '
         return result
     
+    def __is_integer_num(self, n):
+        if isinstance(n, int):
+            return True
+        if isinstance(n, float):
+            return n.is_integer()
+        return False
+    
     def get_size(self):
         assert len(self.opcode) % 2 == 0
         if len(self.opcode) < 16:
@@ -45,19 +54,28 @@ class Instruction:
         return self.regs[1:]
 
     def get_imm(self):
-        reg = self.regs[-1]
+        reg = str(self.regs[-1]).strip()
         vals = reg.split('=')
         vlen = len(vals)
         if vlen != 2:
-            print('ERROR false vals len:', reg)
-            print(str(self))
-        assert(vlen == 2)
+            if reg[:2] == '0x' or reg[:3] == '-0x':
+                return int(reg, 16)
+            if self.__is_integer_num(reg):
+                return int(reg)
         if 'imm' == vals[0]:
             return int(vals[1])
         else:
-            print('ERROR not an imm for inst:', str(self))
+            if len(self.regs) == 2:
+                return 0
+            print('ERROR not an imm', reg, ' for inst:', str(self))
+            return None
 
     def get_dest(self):
         if self.mnemonic in no_dest or len(self.regs) < 1:
             return 'no_dest'
         return self.regs[0]
+    
+    def get_base_mnemonic(self):
+        return str(self.mnemonic) \
+            .replace('c.', '') \
+            .replace('sp', '')
