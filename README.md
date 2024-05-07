@@ -108,7 +108,7 @@ Web interface available at: `http://localhost:3000/`
 
 Memgraph graph style:
 
-```json
+```
 @NodeStyle {
   size: 3
   label: Property(node, "name")
@@ -130,7 +130,7 @@ Memgraph graph style:
 
 Get whole Graph:
 
-```json
+```
 MATCH p=(n)-[r]-(m)
 RETURN *;
 ```

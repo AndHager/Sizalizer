@@ -46,7 +46,7 @@ Memgraph graph style:
 }
 ```
 
-Get whole graph:
+Get whole Graph:
 
 ```json
 MATCH p=(n)-[r]-(m)
