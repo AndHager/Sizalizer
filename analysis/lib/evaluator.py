@@ -115,7 +115,7 @@ def inst_vals(instructions, menomic, treshold=5):
     return sort_dict(result, treshold)
 
 
-def get_lswm_improvement(instructions, base_isnt='lw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'], bmv=False):
+def get_lswm_improvement(instructions, base_isnt, new_byte_count, base_regs, dest_regs):
     '''
     Retruns the improvement potential for the new_byte_count byte lwm instruction.
 
@@ -145,7 +145,6 @@ def get_lswm_improvement(instructions, base_isnt='lw', new_byte_count=2, base_re
         mn = inst.get_base_mnemonic()
         is_eq = last.get_base_mnemonic() == mn
         is_mem = mn == base_isnt
-        is_mv = mn == 'mv'
 
         is_base_reg = False
         is_last_base_reg = False
@@ -166,29 +165,27 @@ def get_lswm_improvement(instructions, base_isnt='lw', new_byte_count=2, base_re
             is_last_dest_reg = len(last.regs) > 0 and last.regs[0] in dest_regs_it
         
         is_mem_pair = is_eq and is_mem and is_base_reg and is_last_base_reg and is_dest_reg and is_last_dest_reg and abs(abs(inst.get_imm()) - abs(last.get_imm())) == 4 and inst.regs[0] != last.regs[0]
-        is_mv_pair = is_eq and is_mv and is_base_reg and is_last_base_reg and is_dest_reg and is_last_dest_reg
         if is_mem_pair:
+            # chain detected
             if chain_byte_saved == 0:
+                # decrement the new isntruction byte count and include the first instruction
                 chain_byte_saved += last.get_size() - new_byte_count
                 if dest_regs != 'all':
+                    # remove the dest reg of the first instruction from the dest reg list as it can not encode the same inst twice
                     dest_regs_it.remove(last.regs[0])
+            # every further instruction has just a positive imact
             chain_byte_saved += inst.get_size()
             if dest_regs != 'all':
-                dest_regs_it.remove(inst.regs[0])
-        elif is_mv_pair and bmv:
-            if chain_byte_saved == 0:
-                # Two instructions are needed to replace a mv chain
-                chain_byte_saved += last.get_size() - new_byte_count*2
-                if dest_regs != 'all':
-                    dest_regs_it.remove(last.regs[0])
-            chain_byte_saved += inst.get_size()
-            if dest_regs != 'all':
+                # remove the dest reg of the n-th inst
                 dest_regs_it.remove(inst.regs[0])
         else: 
+            # chain finished
             if chain_byte_saved > 0:
+                # only replace when there is a positive impact (especially for 32 and 48 bit inst)
                 imp += chain_byte_saved
             chain_byte_saved = 0
             if dest_regs != 'all':
+                # reset dest reg list
                 dest_regs_it = dest_regs.copy()
         last = inst
     return imp
