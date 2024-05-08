@@ -13,4 +13,5 @@ class SearchKey(Enum):
     CHAIN = 'chain'
     CHAIN_DISTRIB = 'chain_distribution'
     PAIR = 'pair'
+    TRIPLET = 'triplet'
     IMM = 'imm'

@@ -69,15 +69,15 @@ def chain_distrib(instructions, threshold=2):
     return sort_dict(result, threshold)
 
 
-def most_pairs(instructions, threshold=5, equal=True, connected=False):
+def most_pairs(instructions, threshold=5, equal=False, connected=False):
     result = {}
     old_inst = instructions[0]
     for inst in instructions[1:]:
         old_mn = old_inst.mnemonic
         new_mn = inst.mnemonic
-        is_equal = old_mn == new_mn or not equal
-        is_connected = old_inst.get_dest() in inst.get_params() or not connected
-        if is_equal and is_connected:
+        is_equal = old_mn == new_mn or equal
+        is_connected = old_inst.get_dest() in inst.get_params() or connected
+        if is_equal or is_connected:
             key = old_mn
             if not equal:
                 key = old_mn + '-' + new_mn
@@ -85,6 +85,30 @@ def most_pairs(instructions, threshold=5, equal=True, connected=False):
                 result[key] += 1
             else:
                 result[key] = 1
+        old_inst = inst
+    return sort_dict(result, threshold)
+
+
+def most_triplets(instructions, threshold=5, equal=False, connected=False):
+    # overlapping triples
+    result = {}
+    vold_inst = instructions[0]
+    old_inst = instructions[1]
+    for inst in instructions[2:]:
+        vold_mn = vold_inst.mnemonic
+        old_mn = old_inst.mnemonic
+        new_mn = inst.mnemonic
+        is_equal = vold_mn == old_mn and old_mn == new_mn and equal
+        is_connected = vold_inst.get_dest() in old_inst.get_params() and old_inst.get_dest() in inst.get_params() and connected
+        if is_equal or is_connected or (not equal and not connected):
+            key = old_mn
+            if not equal:
+                key = vold_mn + '-' + old_mn + '-' + new_mn
+            if key in result:
+                result[key] += 1
+            else:
+                result[key] = 1
+        vold_inst = old_inst
         old_inst = inst
     return sort_dict(result, threshold)
 
@@ -117,7 +141,7 @@ def inst_vals(instructions, menomic, treshold=5):
 
 def get_lswm_improvement(instructions, base_isnt, new_byte_count, base_regs, dest_regs):
     '''
-    Retruns the improvement potential for the new_byte_count byte lwm instruction.
+    Retruns the improvement potential for the `new_byte_count` byte lwm instruction.
 
     The new_byte_count byte lwm instruction has the following form:
     lwm {base_regs}, dest_regs
@@ -188,6 +212,60 @@ def get_lswm_improvement(instructions, base_isnt, new_byte_count, base_regs, des
                 # reset dest reg list
                 dest_regs_it = dest_regs.copy()
         last = inst
+    return imp
+
+
+def get_en_improvement(instructions, mns):
+    '''
+    Retruns the improvement potential for the 48 bit instruction.
+
+    The e.li instruction has the following form:
+    e.li rd, imm
+    The imm is a full 32 bit immediate value.
+
+    Can replace (saves 6 byte):
+    13 d5 f8 01  	srli	a0, a7, 0x1f
+    13 16 13 00  	slli	a2, t1, 0x1
+    33 63 a6 00  	or	    t1, a2, a0
+
+    Can replace (saves 2 byte):
+    37 06 33 b9  	lui     a2, 0xb9330
+    13 06 36 57  	addi	a2, a2, 0x573
+    with e.li rd, imm
+
+    or:
+    93 04 00 08  	addi	s1, zero, 0x80
+    93 08 c1 10  	addi	a7, sp, 0x10c
+    with e.2addi rd1, rd2, rs1, rs2, imm1, imm2
+
+
+    Parameters:
+    - instructions a list of instructions.
+
+    Returns
+    - `int`: the amount of bytes saved with the instruction 
+    '''
+    new_byte_count = 6 # 48 bit == 6 Byte
+    imp = 0
+    n = len(mns)
+    assert(n > 0)
+
+    li = [
+        instructions[i]
+        for i in range(n-1)
+    ]
+
+    for inst in instructions[n-1:]:
+        li.append(inst)
+        assert len(li) == len(mns)
+        is_eq = True
+        for i in range(n):
+            is_eq = is_eq and li[i].get_base_mnemonic() == mns[i]
+        if is_eq:
+            saved = sum([i.get_size() for i in li]) - new_byte_count
+            if saved > 0:
+                imp += saved
+        li.remove(li[0])
     return imp
 
 
