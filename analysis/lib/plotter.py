@@ -49,5 +49,5 @@ def plot_bars(stats, filename, tp, path, mode, search_key):
 
     fig_name = str(path) + '/' + str(name) + '_' + str(tp) + '_' + search_key.value + '_' + mode.value
     plt.savefig(str(fig_name) + '.pdf')
-    # tikzplotlib.save(fig_name + '.tex')
+    tikzplotlib.save(fig_name + '.tex')
     plt.close()

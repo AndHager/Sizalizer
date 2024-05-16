@@ -9,7 +9,7 @@ from lib import instruction_model, parse_utils, evaluator, modes, plotter
 plt.rcParams["font.family"] = "cmb10"
 
 debug = False
-
+plot_all = False
 
 def parse_line(source_line):
     """
@@ -104,24 +104,25 @@ def main(args):
         fqpn = '{}/{}'.format(str(path), str(file))
         instructions = parse_utils.parse_file(fqpn, parse_line, debug)
         total += instructions
-        for mode in modes.Mode:
-            stats = evaluator.most_inst(instructions, mode, modes.SearchKey.MNEMONIC, 10)
-            plotter.plot_bars(stats, str(file), path, tp, mode, modes.SearchKey.MNEMONIC)
+        if plot_all:
+            for mode in modes.Mode:
+                stats = evaluator.most_inst(instructions, mode, modes.SearchKey.MNEMONIC, 10)
+                plotter.plot_bars(stats, str(file), tp, path, mode, modes.SearchKey.MNEMONIC)
 
-        stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
-        plotter.plot_bars(stats, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.OPCODE)
+            stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
+            plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
 
-        stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
-        plotter.plot_bars(stats, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.REGISTER)
-        
-        chains = evaluator.longest_chains(instructions, 10)
-        plotter.plot_bars(chains, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.CHAIN)
+            stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
+            plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
+            
+            chains = evaluator.longest_chains(instructions, 10)
+            plotter.plot_bars(chains, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
 
-        addi_dist = evaluator.inst_vals(instructions, 'addi', 10)
-        plotter.plot_bars(addi_dist, str(file).replace('.txt', '_ADDI'), path, tp, modes.Mode.FULL, modes.SearchKey.IMM)
+            addi_dist = evaluator.inst_vals(instructions, 'addi', 10)
+            plotter.plot_bars(addi_dist, str(file).replace('.txt', '_ADDI'), tp, path, modes.Mode.FULL, modes.SearchKey.IMM)
 
-        lw_dist = evaluator.inst_vals(total, 'lw', 10)
-        plotter.plot_bars(lw_dist, str(file).replace('.txt', '_LW'), path, tp, modes.Mode.FULL, modes.SearchKey.IMM)
+            lw_dist = evaluator.inst_vals(total, 'lw', 10)
+            plotter.plot_bars(lw_dist, str(file).replace('.txt', '_LW'), tp, path, modes.Mode.FULL, modes.SearchKey.IMM)
 
         stats = evaluator.most_inst(instructions, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 10000000)
         # x contains count of 32 Bit (4 Byte) instructions
@@ -154,27 +155,28 @@ def main(args):
                 print(pair)
             print()
 
-        pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
-        plotter.plot_bars(pairs, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.PAIR)
+        if plot_all:
+            pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
+            plotter.plot_bars(pairs, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
     for mode in modes.Mode:
         stats = evaluator.most_inst(total, mode, modes.SearchKey.MNEMONIC, 10)
-        plotter.plot_bars(stats, '_Total', path, tp, mode)
+        plotter.plot_bars(stats, '_Total', tp, path, mode, modes.SearchKey.MNEMONIC)
 
     stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
-    plotter.plot_bars(stats, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.OPCODE)
+    plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
 
     stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
-    plotter.plot_bars(stats, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.REGISTER)
+    plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
     
     chains = evaluator.longest_chains(total, 10)
-    plotter.plot_bars(chains, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.CHAIN)
+    plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
 
     addi_dist = evaluator.inst_vals(total, 'addi', 10)
-    plotter.plot_bars(addi_dist, '_Total_ADDI', path, tp, modes.Mode.FULL, modes.SearchKey.IMM)
+    plotter.plot_bars(addi_dist, '_Total_ADDI', tp, path, modes.Mode.FULL, modes.SearchKey.IMM)
 
     lw_dist = evaluator.inst_vals(total, 'lw', 10)
-    plotter.plot_bars(lw_dist, '_Total_LW', path, tp, modes.Mode.FULL, modes.SearchKey.IMM)
+    plotter.plot_bars(lw_dist, '_Total_LW', tp, path, modes.Mode.FULL, modes.SearchKey.IMM)
 
     stats = evaluator.most_inst(total, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 10000000000)
     # x contains count of 32 Bit (4 Byte) instructions
@@ -202,7 +204,7 @@ def main(args):
         print()
 
     pairs = evaluator.most_pairs(total, 10, equal=False, connected=True)
-    plotter.plot_bars(pairs, '_Total', path, tp, modes.Mode.ALL, modes.SearchKey.PAIR)
+    plotter.plot_bars(pairs, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
     pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
     # x contains count of 16 or 32 Bit instructions pairs
