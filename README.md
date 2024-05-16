@@ -74,21 +74,26 @@ Use the `bax.sh` script in order to execute the analysis process.
 ```bash
 Usage: bax.sh [OPTIONS]
 
-This script builds and executes the Analysis for Embench-iot.
+This script builds and executes the Analysis for Embench-iot, musl and linux kernel.
 
 Available options:
 
-    --clean               Enable cleaning operation (default: true)
+    --clean               Clean run full analysis (default: false)
+    --musl                Set target to musl (default: false)
+    --embench             set target to Embench (default: false)
+    --linux               set target to Linux (default: false)
     --start-db            Start the database service (default: false)
     --purge-db            Purge the database (default: false)
     --build-dfg           Build the data flow graph (default: false)
     --analyze-dfg         Analyze the data flow graph (default: false)
-    --build-embench       Build Embench benchmark (default: false)
+    --build-target        Build target (default: false)
     --analyze-binary      Analyze binary files (default: false)
     --run-embench-size    Run Embench benchmark for size (default: false)
     --run-etiss-embench   Run ETISS with Embench benchmark (default: false)
-    --analyze-traces      Enable trace analysis (default: true)
+    --analyze-traces      Enable trace analysis (default: false)
     --help                Display this help and exit
+
+
 ```
 
 
