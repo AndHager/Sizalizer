@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tikzplotlib
 
-from lib import instruction_model, parse_utils, evaluator, modes, plotter
+from tools import instruction_model, parse_utils, evaluator, modes, plotter
 
 plt.rcParams["font.family"] = "cmb10"
 
