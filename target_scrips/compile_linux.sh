@@ -23,12 +23,12 @@ cd $LINUX_DIR
 mv build build_clang
 
 # Build with gcc
-make mrproper
-make ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu- O=./build 32_defconfig
-cd build
-make -j12 ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu-
+# make mrproper
+# make ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu- O=./build 32_defconfig
+# cd build
+# make -j12 ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu-
 
-cd $LINUX_DIR
-mv build build_gcc
+# cd $LINUX_DIR
+# mv build build_gcc
 
 cd "$SCRIPT_ROOT"
