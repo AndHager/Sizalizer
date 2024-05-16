@@ -106,7 +106,7 @@ def main(args):
         total += instructions
         for mode in modes.Mode:
             stats = evaluator.most_inst(instructions, mode, modes.SearchKey.MNEMONIC, 10)
-            plotter.plot_bars(stats, str(file), path, tp, mode)
+            plotter.plot_bars(stats, str(file), path, tp, mode, modes.SearchKey.MNEMONIC)
 
         stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
         plotter.plot_bars(stats, str(file), path, tp, modes.Mode.ALL, modes.SearchKey.OPCODE)

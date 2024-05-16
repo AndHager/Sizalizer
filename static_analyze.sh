@@ -4,12 +4,11 @@
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+TOOL_PATH=~/riscv_base/bin
+OUT_DIR=${SCRIPT_ROOT}/"$1"
 
-# Build Static analysis pass
-cd "${SCRIPT_ROOT}/llvm-pass-plugin"
-mkdir -p build
-cd build
-cmake ..
-make -j4
-
+cd "${OUT_DIR}"
+ASM=$(printf  '%s ' *.asm)
 cd "${SCRIPT_ROOT}"
+python3 ${SCRIPT_ROOT}/analysis/static.py --path ${OUT_DIR} ${ASM}
+

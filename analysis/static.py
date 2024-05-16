@@ -41,7 +41,7 @@ def parse_line(source_line):
     - The global `instruction_model` with an `Instruction` class should be available
       in the context where this function is executed.
     '''
-    if source_line[0:1] == ' ' or source_line[0:1] == '1':
+    if source_line[0:1] == ' ' or source_line[0:1] in string.hexdigits:
         source_line = source_line.strip()
         sl = source_line.replace('\t', ' ')
         while sl != source_line:
