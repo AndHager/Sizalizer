@@ -47,6 +47,13 @@ Coss Compiler X86 -> RV32
 - Prebuild RISC-V toolchain (https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2024.03.01/riscv32-elf-ubuntu-22.04-llvm-nightly-2024.03.01-nightly.tar.gz)
 - Manually build clang version 18.1.3: (https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.3)
 
+Linux kernel
+
+- Source of linux kernel (https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.8.9.tar.xz)
+
+Musl libc
+
+- Source of musl libc (https://git.musl-libc.org/cgit/musl/snapshot/musl-1.2.5.tar.gz)
 
 ## Setup
 
