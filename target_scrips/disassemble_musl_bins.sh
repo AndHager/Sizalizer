@@ -4,7 +4,7 @@
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-TOOL_PATH=~/riscv/bin
+TOOL_PATH=~/riscv_base/bin
 OUT_PATH=${SCRIPT_ROOT}/../out
 
 cp ${SCRIPT_ROOT}/../../musl-1.2.5/lib/libc.a ${OUT_PATH}

@@ -1,4 +1,4 @@
-CC = ~/riscv/bin/clang
+CC = ~/riscv_base/bin/clang
 
 LLVM_MODULES = core jit native
 

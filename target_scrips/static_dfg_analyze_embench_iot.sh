@@ -4,7 +4,7 @@
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-EMBENCH_DIR="${SCRIPT_ROOT}/embench-iot"
+EMBENCH_DIR="${SCRIPT_ROOT}/../embench-iot"
 BUILD_DIR="${EMBENCH_DIR}/build"
 LOG_DIR="${EMBENCH_DIR}/log"
 
@@ -18,7 +18,7 @@ python3 ./build_all.py \
             --chip=generic \
             --board=ri5cyverilator \
             --cc=clang \
-            --cflags="-fno-builtin-bcmp -Oz -fpass-plugin=./seal/llvm-pass-plugin/build/libLLVMCDFG.so" \
+            --cflags="-fno-builtin-bcmp -Oz -fpass-plugin=/home/ahc/Desktop/CodeComp/integrator/llvm-pass-plugin/build/libLLVMCDFG.so" \
             --ldflags="-nostartfiles -nostdlib" \
             --dummy-libs="crt0 libc libgcc libm"
 

@@ -4,7 +4,7 @@
 set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-TOOL_PATH=/opt/riscv/bin
+TOOL_PATH=~/riscv/bin
 OUT_DIR=${SCRIPT_ROOT}/../"$1"
 
 # for file in aha-mont64 edn huffbench nettle-aes qrduino st matmult-int nettle-sha256 statemate crc32 minver nsichneu sglib-combined ud cubic nbody picojpeg slre wikisort;
