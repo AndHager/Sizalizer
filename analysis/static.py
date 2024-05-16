@@ -2,7 +2,7 @@ import argparse
 from pathlib import Path
 import string
 
-from lib import instruction_model, parse_utils, evaluator, modes, plotter
+from tools import instruction_model, parse_utils, evaluator, modes, plotter
 
 # Debug logs (very verbose)
 debug = False
@@ -144,136 +144,138 @@ def main(args):
         if len(instructions) > 0:
             total += instructions
             total_byte_count = evaluator.get_byte_count(instructions)
-            inst_count = len(instructions)
-            print(file, 'contains:', inst_count, 'insts, with', total_byte_count, 'bytes')
+            if total_byte_count > 0:
+                inst_count = len(instructions)
+                print(file, 'contains:', inst_count, 'insts, with', total_byte_count, 'bytes')
+                
+                if plot_all:
+                    for mode in modes.Mode:
+                        stats = evaluator.most_inst(instructions, mode, modes.SearchKey.MNEMONIC, 10)
+                        plotter.plot_bars(stats, str(file), tp, path, mode)
+                    stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
+                    plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
+
+                    stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
+                    plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
+                
+                    chains = evaluator.longest_chains(instructions, 10)
+                    plotter.plot_bars(chains, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
+
+
+                stats = evaluator.most_inst(instructions, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 10000000)
+                # x contains count of 32 Bit (4 Byte) instructions
+                # x*2 is the count of Bytes saved by a reduction to 16 bit inst
+                improvement = evaluator.get_improvement(stats, lambda x: x*2)
+                print('  Improvement by replacing 32 with 16 Bit inst: ' + str(improvement) + ' Byte ==', round((1 - ((total_byte_count - improvement)/total_byte_count))*100), '%')
+
+                if debug:
+                    pairs = evaluator.most_pairs(instructions, 10, equal=True)
+                    for pair in pairs:
+                        print(pair)
+                    print()
+
+                    pairs = evaluator.most_pairs(instructions, 10, equal=False)
+                    for pair in pairs:
+                        print(pair)
+                    print()
+
+                pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
+                if plot_all:
+                    plotter.plot_bars(pairs, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
+
+
+
+                pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
+                # x contains count of 16 or 32 Bit instructions pairs
+                # x*6 is the count of Bytes saved by a reduction to 16 bit inst
+                improvement = evaluator.get_improvement(pairs, lambda x: x*6)
+                # print('Max. improvement by replacing all 16 or 32 Bit instructions pairs with 16 Bit inst: ' + str(improvement) + ' Byte')
+        else:
+            print('ERROR: No instructions in', fqpn)
+    if len(total) > 1:
+        total_inst_count = len(total)
+        total_byte_count = evaluator.get_byte_count(total)
+        if total_byte_count > 1:
+            print('Total:', total_inst_count, ' insts, with', total_byte_count, 'bytes')
+            for mode in modes.Mode:
+                stats = evaluator.most_inst(total, mode, modes.SearchKey.MNEMONIC, 10)
+                plotter.plot_bars(stats, '_Total', tp, path, mode, modes.SearchKey.MNEMONIC)
+
+            stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
+            plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
+
+            stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
+            plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
             
-            if plot_all:
-                for mode in modes.Mode:
-                    stats = evaluator.most_inst(instructions, mode, modes.SearchKey.MNEMONIC, 10)
-                    plotter.plot_bars(stats, str(file), tp, path, mode)
-                stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
-                plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
+            chains = evaluator.longest_chains(total, 10)
+            plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
 
-                stats = evaluator.most_inst(instructions, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
-                plotter.plot_bars(stats, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
+            chains = evaluator.chain_distrib(total, 10)
+            plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN_DISTRIB)
+
+            triplets = evaluator.most_triplets(total, 10, equal=False, connected=True)
+            plotter.plot_bars(triplets, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.TRIPLET)
+
+            triplets = evaluator.most_triplets(total, 10)
+            plotter.plot_bars(triplets, '_Total_Free', tp, path, modes.Mode.ALL, modes.SearchKey.TRIPLET)
+
+            lw16_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
+            sw16_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
             
-                chains = evaluator.longest_chains(instructions, 10)
-                plotter.plot_bars(chains, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
+            lw32_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
+            sw32_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
+            
+            lw48_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=6, base_regs='all', dest_regs='all')
+            sw48_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=6, base_regs='all', dest_regs='all')
 
+            eli_imp = evaluator.get_en_improvement(total, ['lui', 'addi'])
+            e2addi_imp = evaluator.get_en_improvement(total, ['addi', 'addi'])
+            e2add_imp = evaluator.get_en_improvement(total, ['add', 'add'])
+            
+            e3add_imp = evaluator.get_en_improvement(total, ['srli', 'slli', 'or'])
 
-            stats = evaluator.most_inst(instructions, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 10000000)
+            imp = [
+                ('e.li', eli_imp/total_byte_count*100),
+                ('e.2addi', e2addi_imp/total_byte_count*100),
+                ('e.2add', e2add_imp/total_byte_count*100),
+                ('e.slro', e3add_imp/total_byte_count*100),
+                ('c.lwm', lw16_imp/total_byte_count*100),
+                ('c.swm', sw16_imp/total_byte_count*100),
+                ('lwm', lw32_imp/total_byte_count*100),
+                ('swm', sw32_imp/total_byte_count*100),
+                ('e.lwm', lw48_imp/total_byte_count*100),
+                ('e.swm', sw48_imp/total_byte_count*100),
+            ]
+        
+            plotter.plot_bars(imp, '_Total_LSWM_IMP', tp, path, modes.Mode.ALL, modes.SearchKey.MNEMONIC)
+            assert total_byte_count != 0
+            stats = evaluator.most_inst(total, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 100000)
             # x contains count of 32 Bit (4 Byte) instructions
             # x*2 is the count of Bytes saved by a reduction to 16 bit inst
             improvement = evaluator.get_improvement(stats, lambda x: x*2)
-            print('  Improvement by replacing 32 with 16 Bit inst: ' + str(improvement) + ' Byte ==', round((1 - ((total_byte_count - improvement)/total_byte_count))*100), '%')
+            print('  Total Improvement by replacing 32 with 16 Bit inst: ' + str(improvement) + ' Byte ==', round(improvement/total_byte_count*100), '%')
 
             if debug:
-                pairs = evaluator.most_pairs(instructions, 10, equal=True)
+                pairs = evaluator.most_pairs(total, 10, equal=True)
                 for pair in pairs:
                     print(pair)
                 print()
 
-                pairs = evaluator.most_pairs(instructions, 10, equal=False)
+                pairs = evaluator.most_pairs(total, 10, equal=False)
                 for pair in pairs:
                     print(pair)
                 print()
 
-            pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
-            if plot_all:
-                plotter.plot_bars(pairs, str(file), tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
+            pairs = evaluator.most_pairs(total, 10, equal=False, connected=True)
+            plotter.plot_bars(pairs, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
+            pairs = evaluator.most_pairs(total, 10)
+            plotter.plot_bars(pairs, '_Total_Free', tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
 
-
-            pairs = evaluator.most_pairs(instructions, 10, equal=False, connected=True)
+            pairs = evaluator.most_pairs(instructions, 1, equal=False, connected=True)
             # x contains count of 16 or 32 Bit instructions pairs
             # x*6 is the count of Bytes saved by a reduction to 16 bit inst
             improvement = evaluator.get_improvement(pairs, lambda x: x*6)
-            # print('Max. improvement by replacing all 16 or 32 Bit instructions pairs with 16 Bit inst: ' + str(improvement) + ' Byte')
-        else:
-            print('ERROR: No instructions in', fqpn)
-    if len(total) > 0:
-        total_inst_count = len(total)
-        total_byte_count = evaluator.get_byte_count(total)
-        print('Total:', total_inst_count, ' insts, with', total_byte_count, 'bytes')
-        for mode in modes.Mode:
-            stats = evaluator.most_inst(total, mode, modes.SearchKey.MNEMONIC, 10)
-            plotter.plot_bars(stats, '_Total', tp, path, mode, modes.SearchKey.MNEMONIC)
-
-        stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.OPCODE, 10)
-        plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.OPCODE)
-
-        stats = evaluator.most_inst(total, modes.Mode.ALL, modes.SearchKey.REGISTER, 10)
-        plotter.plot_bars(stats, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.REGISTER)
-        
-        chains = evaluator.longest_chains(total, 10)
-        plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN)
-
-        chains = evaluator.chain_distrib(total, 10)
-        plotter.plot_bars(chains, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.CHAIN_DISTRIB)
-
-        triplets = evaluator.most_triplets(total, 10, equal=False, connected=True)
-        plotter.plot_bars(triplets, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.TRIPLET)
-
-        triplets = evaluator.most_triplets(total, 10)
-        plotter.plot_bars(triplets, '_Total_Free', tp, path, modes.Mode.ALL, modes.SearchKey.TRIPLET)
-
-        lw16_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
-        sw16_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=2, base_regs=['sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4'], dest_regs=['ra', 'sp', 's0', 's1', 'a0', 'a1'])
-        
-        lw32_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
-        sw32_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=4, base_regs='all', dest_regs={'ra', 'sp', 's0', 's1', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 's2', 's3', 's4', 's5', 's6', 's7'})
-        
-        lw48_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=6, base_regs='all', dest_regs='all')
-        sw48_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=6, base_regs='all', dest_regs='all')
-
-        eli_imp = evaluator.get_en_improvement(total, ['lui', 'addi'])
-        e2addi_imp = evaluator.get_en_improvement(total, ['addi', 'addi'])
-        e2add_imp = evaluator.get_en_improvement(total, ['add', 'add'])
-        
-        e3add_imp = evaluator.get_en_improvement(total, ['srli', 'slli', 'or'])
-
-        imp = [
-            ('e.li', eli_imp),
-            ('e.2addi', e2addi_imp),
-            ('e.2add', e2add_imp),
-            ('e.slro', e3add_imp),
-            ('c.lwm', lw16_imp),
-            ('c.swm', sw16_imp),
-            ('lwm', lw32_imp),
-            ('swm', sw32_imp),
-            ('e.lwm', lw48_imp),
-            ('e.swm', sw48_imp),
-        ]
-    
-        plotter.plot_bars(imp, '_Total_LSWM_IMP', tp, path, modes.Mode.ALL, modes.SearchKey.MNEMONIC)
-
-        stats = evaluator.most_inst(total, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 100000)
-        # x contains count of 32 Bit (4 Byte) instructions
-        # x*2 is the count of Bytes saved by a reduction to 16 bit inst
-        improvement = evaluator.get_improvement(stats, lambda x: x*2)
-        print('  Total Improvement by replacing 32 with 16 Bit inst: ' + str(improvement) + ' Byte ==', round((1 - ((total_byte_count - improvement)/total_byte_count))*100), '%')
-
-        if debug:
-            pairs = evaluator.most_pairs(total, 10, equal=True)
-            for pair in pairs:
-                print(pair)
-            print()
-
-            pairs = evaluator.most_pairs(total, 10, equal=False)
-            for pair in pairs:
-                print(pair)
-            print()
-
-        pairs = evaluator.most_pairs(total, 10, equal=False, connected=True)
-        plotter.plot_bars(pairs, '_Total', tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
-
-        pairs = evaluator.most_pairs(total, 10)
-        plotter.plot_bars(pairs, '_Total_Free', tp, path, modes.Mode.ALL, modes.SearchKey.PAIR)
-
-        pairs = evaluator.most_pairs(instructions, 1, equal=False, connected=True)
-        # x contains count of 16 or 32 Bit instructions pairs
-        # x*6 is the count of Bytes saved by a reduction to 16 bit inst
-        improvement = evaluator.get_improvement(pairs, lambda x: x*6)
     else:
         print('ERROR: In total no instructions')
 
