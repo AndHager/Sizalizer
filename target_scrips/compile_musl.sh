@@ -8,7 +8,7 @@ MUSL_DIR="${SCRIPT_ROOT}/../../musl-1.2.5"
 
 cp ${SCRIPT_ROOT}/../res/config.mak.RISCV_BUILD ${MUSL_DIR}/config.mak
 
-# Build musl with pass
+# Build musl
 cd "$MUSL_DIR"
 make clean
 make -j12

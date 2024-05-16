@@ -5,7 +5,7 @@ set -ue
 
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SCRIPT_TARGET=${SCRIPT_ROOT}/target_scrips
-SCRIPT_ANALYSIS=${SCRIPT_ROOT}/target_scrips
+SCRIPT_ANALYSIS=${SCRIPT_ROOT}/analysis
 OUT_DIR=${SCRIPT_ROOT}/out
 
 # Set default values
@@ -13,6 +13,7 @@ clean=false
 
 musl=false
 embench=false
+linux=false
 
 start_db=false
 purge_db=false
@@ -37,7 +38,8 @@ Available options:
 
     --clean               Clean run full analysis (default: $clean)
     --musl                Set target to musl (default: $musl)
-    --embench             set target to Embench (dfault: $embench)
+    --embench             set target to Embench (default: $embench)
+    --linux               set target to Linux (default: $linux)
     --start-db            Start the database service (default: $start_db)
     --purge-db            Purge the database (default: $purge_db)
     --build-dfg           Build the data flow graph (default: $build_dfg)
@@ -73,6 +75,10 @@ do
     --musl)
     musl=true
     shift # Remove --musl from processing
+    ;;
+    --linux)
+    linux=true
+    shift # Remove --linux from processing
     ;;
     --purge-db)
     purge_db=true
@@ -171,7 +177,7 @@ fi
 if [ "$build_dfg" = true ] ; then
     # build dfg pass
     echo "INFO: Build DFG analysis LLVM-Pass"
-    ${SCRIPT_TARGET}/build_dfg_pass.sh &> ${OUT_DIR}/dfg_pass_build.txt
+    ${SCRIPT_ROOT}/build_dfg_pass.sh &> ${OUT_DIR}/dfg_pass_build.txt
 
     # Static analyze benchmark
     echo "INFO: Building DFG"
@@ -181,6 +187,10 @@ if [ "$build_dfg" = true ] ; then
 
     if [ "$musl" = true ] ; then
         ${SCRIPT_TARGET}/static_dfg_analyze_musl.sh &> ${OUT_DIR}/musl_dfg_pass_run.txt
+    fi 
+
+    if [ "$linux" = true ] ; then
+        ${SCRIPT_TARGET}/static_dfg_analyze_linux.sh &> ${OUT_DIR}/linux_dfg_pass_run.txt
     fi 
 fi
 
@@ -206,6 +216,11 @@ if [ "$build_target" = true ] ; then
         echo "INFO: Building bench for musl"
         echo "TODO: select bench" # maybe https://www.stupid-projects.com/posts/compile-benchmarks-with-gcc-musl-and-clang/ https://bitbucket.org/dimtass/gcc_musl_clang_benchmark/src/master/
     fi 
+
+    if [ "$linux" = true ] ; then
+        echo "INFO: Building linux"
+        ${SCRIPT_TARGET}/compile_linux.sh &> ${OUT_DIR}/linux_build.txt
+    fi 
 fi
 
 if [ "$analyze_binary" = true ] ; then
@@ -214,7 +229,7 @@ if [ "$analyze_binary" = true ] ; then
         ${SCRIPT_TARGET}/disassemble_embench_bins.sh
 
         echo "INFO: Static analyzing the binaries of Embench-iot"
-        ${SCRIPT_TARGET}/static_analyze_embench.sh out
+        ${SCRIPT_TARGET}/static_analyze_embench.sh out  &> ${OUT_DIR}/static_embench_out.txt
     fi 
 
     if [ "$musl" = true ] ; then
@@ -222,7 +237,15 @@ if [ "$analyze_binary" = true ] ; then
         ${SCRIPT_TARGET}/disassemble_musl_bins.sh
 
         echo "INFO: Static analyzing the binaries of musl"
-        ${SCRIPT_TARGET}/static_analyze_musl.sh out
+        ${SCRIPT_ROOT}/static_analyze.sh out &> ${OUT_DIR}/static_musl_out.txt
+    fi 
+
+    if [ "$linux" = true ] ; then
+        echo "INFO: Disassembling Binaries"
+        ${SCRIPT_TARGET}/disassemble_linux_bins.sh
+
+        echo "INFO: Static analyzing the linux binary"
+        ${SCRIPT_ROOT}/static_analyze.sh out &> ${OUT_DIR}/static_linux_out.txt
     fi 
 fi
 
