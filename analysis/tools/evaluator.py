@@ -290,3 +290,6 @@ def get_byte_count(instructions):
     for inst in instructions:
         result += inst.get_size()
     return result
+
+def rel(count, total):
+    return count/total*100

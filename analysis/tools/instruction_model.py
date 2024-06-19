@@ -52,6 +52,11 @@ class Instruction:
         if self.mnemonic in no_dest:
             return self.regs
         return self.regs[1:]
+    
+    def get_dest(self):
+        if self.mnemonic in no_dest or len(self.regs) < 1:
+            return 'no_dest'
+        return self.regs[0]
 
     def get_imm(self):
         reg = str(self.regs[-1]).strip()
@@ -69,11 +74,6 @@ class Instruction:
                 return 0
             print('ERROR not an imm', reg, ' for inst:', str(self))
             return None
-
-    def get_dest(self):
-        if self.mnemonic in no_dest or len(self.regs) < 1:
-            return 'no_dest'
-        return self.regs[0]
     
     def get_base_mnemonic(self):
         return str(self.mnemonic) \

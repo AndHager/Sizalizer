@@ -228,6 +228,8 @@ def main(args):
             lw48_imp = evaluator.get_lswm_improvement(total, base_isnt='lw', new_byte_count=6, base_regs='all', dest_regs='all')
             sw48_imp = evaluator.get_lswm_improvement(total, base_isnt='sw', new_byte_count=6, base_regs='all', dest_regs='all')
 
+
+            call = evaluator.get_en_improvement(total, ['auipc', 'jalr'])
             eli_imp = evaluator.get_en_improvement(total, ['lui', 'addi'])
             e2addi_imp = evaluator.get_en_improvement(total, ['addi', 'addi'])
             e2add_imp = evaluator.get_en_improvement(total, ['add', 'add'])
@@ -235,25 +237,25 @@ def main(args):
             e3add_imp = evaluator.get_en_improvement(total, ['srli', 'slli', 'or'])
 
             imp = [
-                ('e.li', eli_imp/total_byte_count*100),
-                ('e.2addi', e2addi_imp/total_byte_count*100),
-                ('e.2add', e2add_imp/total_byte_count*100),
-                ('e.slro', e3add_imp/total_byte_count*100),
-                ('c.lwm', lw16_imp/total_byte_count*100),
-                ('c.swm', sw16_imp/total_byte_count*100),
-                ('lwm', lw32_imp/total_byte_count*100),
-                ('swm', sw32_imp/total_byte_count*100),
-                ('e.lwm', lw48_imp/total_byte_count*100),
-                ('e.swm', sw48_imp/total_byte_count*100),
+                ('e.call', evaluator.rel(call, total_byte_count)),
+                ('e.li', evaluator.rel(eli_imp, total_byte_count)),
+                ('e.2addi', evaluator.rel(e2addi_imp, total_byte_count)),
+                ('e.2add', evaluator.rel(e2add_imp, total_byte_count)),
+                ('e.slro', evaluator.rel(e3add_imp, total_byte_count)),
+                ('c.lwm', evaluator.rel(lw16_imp, total_byte_count)),
+                ('c.swm', evaluator.rel(sw16_imp, total_byte_count)),
+                ('lwm', evaluator.rel(lw32_imp, total_byte_count)),
+                ('swm', evaluator.rel(sw32_imp, total_byte_count)),
+                ('e.lwm', evaluator.rel(lw48_imp, total_byte_count)),
+                ('e.swm', evaluator.rel(sw48_imp, total_byte_count)),
             ]
-        
             plotter.plot_bars(imp, '_Total_LSWM_IMP', tp, path, modes.Mode.ALL, modes.SearchKey.MNEMONIC)
             assert total_byte_count != 0
             stats = evaluator.most_inst(total, modes.Mode.FULL, modes.SearchKey.MNEMONIC, 100000)
             # x contains count of 32 Bit (4 Byte) instructions
             # x*2 is the count of Bytes saved by a reduction to 16 bit inst
             improvement = evaluator.get_improvement(stats, lambda x: x*2)
-            print('  Total Improvement by replacing 32 with 16 Bit inst: ' + str(improvement) + ' Byte ==', round(improvement/total_byte_count*100), '%')
+            print('  Total Improvement by replacing 32 with 16 Bit inst: ' + str(improvement) + ' Byte ==', round(evaluator.rel(improvement, total_byte_count)), '%')
 
             if debug:
                 pairs = evaluator.most_pairs(total, 10, equal=True)

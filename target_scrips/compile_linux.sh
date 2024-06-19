@@ -10,12 +10,11 @@ CONF_DIR="${LINUX_DIR}/arch/riscv/configs"
 
 
 cd $LINUX_DIR
-rm -r ./build
 cat $CONF_DIR/32-bit.config $CONF_DIR/defconfig > $CONF_DIR/32_defconfig
 
 # Build with clang
 make mrproper
-make ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu- LLVM=1 CC=$TOOL_DIR/clang O=./build 32_defconfig
+make -j12 ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu- LLVM=1 CC=$TOOL_DIR/clang O=./build 32_defconfig
 cd build
 make -j12 ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu- LLVM=1 CC=$TOOL_DIR/clang
 
@@ -24,7 +23,7 @@ mv build build_clang
 
 # Build with gcc
 # make mrproper
-# make ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu- O=./build 32_defconfig
+# make -j12 ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu- O=./build 32_defconfig
 # cd build
 # make -j12 ARCH=riscv CROSS_COMPILE=$TOOL_DIR/riscv32-unknown-linux-gnu-
 
